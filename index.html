@@ -5,221 +5,307 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="dr. Mattia Lantero">
 <title>dr. Mattia Lantero</title>
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
-:root{
-  --p:#014462;--a:#EB750E;--dk:#1E1E1E;--md:#AEADAD;
-  --bg:#F4F6F9;--wh:#fff;--br:#E2E6EA;
-  --pl:#e8f2f7;--al:#fdf0e6;--dn:#c0392b;--dl:#fdf2f2;
-  --ok:#1a7a4a;--ol:#d4edda;
-  --r:10px;--rs:7px;
-  --s1:0 1px 4px rgba(1,68,98,.08);
-  --s2:0 4px 18px rgba(1,68,98,.13);
-  --s3:0 16px 48px rgba(1,68,98,.18);
+:root {
+  --p:#014462; --a:#EB750E; --dk:#1E1E1E; --md:#AEADAD;
+  --bg:#F4F6F9; --wh:#ffffff; --br:#E2E6EA;
+  --pl:#e8f2f7; --al:#fdf0e6; --ok:#1a7a4a; --ol:#d4edda;
+  --dn:#c0392b; --dl:#fdf2f2;
+  --r:10px; --rs:7px;
 }
-*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
-body{font-family:'Lato',sans-serif;background:var(--bg);color:var(--dk);height:100vh;overflow:hidden;display:flex;flex-direction:column}
-#mh{display:none;align-items:center;gap:12px;padding:0 16px;height:56px;background:var(--p);flex-shrink:0;z-index:40}
-#mt{background:none;border:none;color:#fff;font-size:22px;cursor:pointer;padding:4px}
-.mlt{color:#fff;font-size:15px;font-weight:700}
-.mls{color:rgba(255,255,255,.5);font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
-#bw{display:flex;flex:1;overflow:hidden}
-#sb{width:248px;min-width:248px;background:var(--p);display:flex;flex-direction:column;height:100%;overflow-y:auto;transition:transform .3s ease}
-.slogo{padding:22px 20px 16px;border-bottom:1px solid rgba(255,255,255,.1)}
-.sdr{font-size:13px;color:var(--a);font-weight:700}
-.snm{font-size:18px;font-weight:900;color:#fff;letter-spacing:-.3px;line-height:1.1}
-.ssb{font-size:9px;color:rgba(255,255,255,.4);font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-top:3px}
-.ns{font-size:9px;font-weight:700;color:rgba(255,255,255,.35);letter-spacing:.12em;padding:14px 20px 5px;text-transform:uppercase}
-.ni{display:flex;align-items:center;gap:9px;padding:9px 12px;margin:2px 8px;border-radius:var(--rs);border:none;background:none;cursor:pointer;text-align:left;color:rgba(255,255,255,.7);font-size:13px;font-family:'Lato',sans-serif;font-weight:400;width:calc(100% - 16px);transition:all .15s}
-.ni:hover{background:rgba(255,255,255,.08);color:#fff}
-.ni.active{background:var(--a);color:#fff;font-weight:700}
-.ni .ic{font-size:14px;width:18px;text-align:center;flex-shrink:0}
-.ni .lb{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1}
-.ni .nb{background:rgba(255,255,255,.2);color:#fff;font-size:10px;padding:1px 6px;border-radius:10px;font-weight:700}
-.ni.active .nb{background:rgba(255,255,255,.3)}
-.ab{margin:6px 16px 0;padding:9px 12px;border-radius:var(--rs);border:1.5px dashed rgba(255,255,255,.2);background:none;color:rgba(255,255,255,.4);cursor:pointer;font-size:12px;font-family:'Lato',sans-serif;text-align:center;transition:all .15s}
-.ab:hover{border-color:var(--a);color:var(--a)}
-.sfooter{margin-top:auto;padding:14px 16px;border-top:1px solid rgba(255,255,255,.1)}
-.bb{display:block;width:100%;padding:8px 10px;border-radius:var(--rs);border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.06);color:rgba(255,255,255,.6);cursor:pointer;font-size:11px;font-family:'Lato',sans-serif;font-weight:700;text-align:center;margin-bottom:5px;transition:all .15s}
-.bb:hover{background:rgba(255,255,255,.12);color:#fff}
-.bbl{font-size:9px;color:rgba(255,255,255,.25);text-align:center;letter-spacing:.08em;text-transform:uppercase;margin-top:6px}
-#main{flex:1;overflow-y:auto;background:var(--bg)}
-.page{padding:28px 32px;max-width:960px}
-.eyebrow{font-size:10px;font-weight:700;color:var(--a);letter-spacing:.15em;text-transform:uppercase;margin-bottom:5px}
-.pt{font-size:26px;font-weight:900;letter-spacing:-.5px;color:var(--dk);margin-bottom:3px}
-.pt .ac{color:var(--a)}
-.ps{font-size:13px;color:var(--md);margin-bottom:22px}
-.ph{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:22px;flex-wrap:wrap;gap:10px}
-.sr{display:flex;gap:12px;margin-bottom:26px;flex-wrap:wrap}
-.sc{background:var(--wh);border:1px solid var(--br);border-radius:var(--r);padding:16px 20px;flex:1;min-width:105px;box-shadow:var(--s1);position:relative;overflow:hidden}
-.sc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--p)}
-.sc.o::before{background:var(--a)}.sc.d::before{background:var(--dk)}
-.sic{font-size:18px;margin-bottom:7px}
-.sv{font-size:30px;font-weight:900;color:var(--p);line-height:1}
-.sc.o .sv{color:var(--a)}.sc.d .sv{color:var(--dk)}
-.slb{font-size:10px;color:var(--md);margin-top:3px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
-.cg{display:grid;grid-template-columns:repeat(auto-fill,minmax(185px,1fr));gap:12px}
-.gc{background:var(--wh);border:1px solid var(--br);border-radius:var(--r);padding:16px;cursor:pointer;transition:box-shadow .2s,transform .15s;box-shadow:var(--s1);position:relative;overflow:hidden}
-.gc::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--p);transform:scaleX(0);transition:transform .2s}
-.gc:hover{box-shadow:var(--s2);transform:translateY(-2px)}.gc:hover::after{transform:scaleX(1)}
-.gct{font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--a);margin-bottom:5px}
-.gcn{font-weight:900;font-size:15px;margin-bottom:4px;color:var(--dk)}
-.gcm{font-size:11px;color:var(--md);margin-top:2px}
-.tabs{display:flex;margin-bottom:20px;border-bottom:2px solid var(--br);flex-wrap:wrap}
-.tab{padding:9px 14px;border:none;background:none;cursor:pointer;font-size:11px;font-family:'Lato',sans-serif;color:var(--md);border-bottom:2px solid transparent;margin-bottom:-2px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;transition:color .15s}
-.tab:hover{color:var(--dk)}.tab.active{color:var(--p);border-bottom:2px solid var(--p)}
-.db{background:var(--wh);border:1px solid var(--br);border-radius:var(--r);margin-bottom:10px;overflow:hidden;box-shadow:var(--s1)}
-.dh{display:flex;align-items:center;justify-content:space-between;padding:13px 16px;cursor:pointer;user-select:none;border-left:4px solid var(--p)}
-.dh:hover{background:#fafafa}
-.dni{font-weight:900;font-size:14px;border:none;outline:none;background:transparent;cursor:text;font-family:'Lato',sans-serif;color:var(--dk);width:160px}
-.dy{padding:8px 12px 14px;background:#f9fafc;border-top:1px solid var(--br)}
-.eb{background:var(--wh);border:1px solid var(--br);border-radius:var(--rs);margin-bottom:7px;overflow:hidden}
-.eh{display:flex;align-items:center;justify-content:space-between;padding:10px 12px;cursor:pointer;user-select:none}
-.eh:hover{background:#fafafa}
-.ebody{padding:13px 15px;border-top:1px solid var(--br);background:#fdfdfd}
-.eg{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.eg .s2{grid-column:1/-1}
-.sban{background:var(--p);color:#fff;padding:14px 18px;border-radius:var(--r);margin-bottom:16px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
-.sban h3{font-size:15px;font-weight:900;margin-bottom:2px}
-.sban p{font-size:12px;opacity:.7}
-.sex{background:var(--wh);border:1px solid var(--br);border-radius:var(--r);margin-bottom:10px;overflow:hidden;box-shadow:var(--s1)}
-.sexh{padding:12px 16px;border-left:4px solid var(--a);background:#fafafa}
-.sext{font-weight:900;font-size:14px;color:var(--dk)}
-.sexm{font-size:12px;color:var(--md);margin-top:2px}
-.scr{display:flex;align-items:center;gap:8px;padding:10px 16px;border-bottom:1px solid var(--br)}
-.scr:last-child{border-bottom:none}
-.scn{font-weight:700;font-size:13px;flex:1}
-.sins{display:flex;gap:7px;align-items:center;flex-wrap:wrap}
-.sins input{width:62px;padding:6px 7px;font-size:13px;border:1.5px solid var(--br);border-radius:6px;font-family:'Lato',sans-serif;text-align:center}
-.sins input:focus{border-color:var(--a);outline:none}
-.sunit{font-size:10px;color:var(--md);font-weight:700}
-.bmg{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px;margin-bottom:22px}
-.bmc{background:var(--wh);border:1px solid var(--br);border-radius:var(--r);padding:16px;box-shadow:var(--s1)}
-.bmn{font-weight:700;font-size:13px;color:var(--dk);margin-bottom:3px}
-.bmv{font-size:28px;font-weight:900;color:var(--p);line-height:1}
-.bmc.hd .bmv{color:var(--a)}
-.bmu{font-size:11px;color:var(--md);font-weight:700;margin-left:3px}
-.bmd{font-size:11px;color:var(--md);margin-top:3px}
-.bmt{font-size:12px;font-weight:700;margin-top:4px}
-.tup{color:var(--ok)}.tdn{color:var(--dn)}
-.shc{background:var(--wh);border:1px solid var(--br);border-radius:var(--r);margin-bottom:8px;overflow:hidden;box-shadow:var(--s1)}
-.shh{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;cursor:pointer;border-left:4px solid var(--ok)}
-.shh:hover{background:#fafafa}
-.tblk{background:var(--wh);border:1px solid var(--br);border-radius:var(--r);margin-bottom:10px;overflow:hidden;box-shadow:var(--s1)}
-.tbh{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;cursor:pointer;border-left:4px solid var(--a)}
-.tbh:hover{background:#fafafa}
-.fl{font-size:10px;font-weight:700;color:var(--md);text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
-input[type=text],input[type=number],input[type=date],select,textarea{width:100%;padding:8px 10px;border:1.5px solid var(--br);border-radius:var(--rs);font-size:13px;font-family:'Lato',sans-serif;outline:none;background:var(--wh);color:var(--dk);transition:border-color .15s}
-input:focus,select:focus,textarea:focus{border-color:var(--p);box-shadow:0 0 0 3px rgba(1,68,98,.07)}
-.btn{padding:9px 18px;border-radius:var(--rs);border:none;cursor:pointer;font-size:13px;font-family:'Lato',sans-serif;font-weight:700;transition:all .15s;letter-spacing:.02em}
-.btn:active{transform:scale(.97)}
-.bp{background:var(--p);color:#fff}.bp:hover{background:#013652}
-.ba{background:var(--a);color:#fff}.ba:hover{background:#d4690c}
-.bg{background:transparent;color:var(--md);border:1.5px solid var(--br)}
-.bd{background:var(--dl);color:var(--dn);border:1px solid #f5c6c6;font-size:12px;padding:7px 13px}
-.badd{background:var(--pl);color:var(--p);border:1.5px dashed #a8c8d8;padding:9px 14px;border-radius:var(--rs);cursor:pointer;font-size:11px;font-weight:700;font-family:'Lato',sans-serif;letter-spacing:.03em;text-transform:uppercase;transition:all .15s}
-.badd:hover{background:#d0e8f2;border-color:var(--p)}
-.bi{padding:5px 9px;background:var(--pl);color:var(--p);border:none;border-radius:6px;cursor:pointer;font-size:13px}
-.bia{padding:5px 9px;background:var(--al);color:var(--a);border:none;border-radius:6px;cursor:pointer;font-size:13px}
-.bid{padding:5px 9px;background:var(--dl);color:var(--dn);border:none;border-radius:6px;cursor:pointer;font-size:13px}
-.badge{font-size:10px;background:var(--pl);color:var(--p);padding:2px 8px;border-radius:20px;font-weight:700;white-space:nowrap}
-.bo{background:var(--al);color:var(--a)}
-.bs{background:var(--ol);color:var(--ok)}
-.bm{background:#f0f0f0;color:var(--md)}
-.cd{display:inline-block;width:7px;height:7px;border-radius:50%;flex-shrink:0}
-.cf{background:var(--p)}.cc{background:var(--a)}.cm{background:#1a7a4a}
-.ci{background:#6c3483}.cp{background:#c0392b}.co{background:var(--md)}.csr{background:#17a589}
-.tb{padding:8px 14px;border:1.5px solid var(--br);border-radius:var(--rs);cursor:pointer;background:var(--wh);font-size:12px;font-family:'Lato',sans-serif;font-weight:700;transition:all .15s}
-.tb.active{border-color:var(--p);background:var(--pl);color:var(--p)}
-.ov{position:fixed;inset:0;background:rgba(1,68,98,.4);display:flex;align-items:center;justify-content:center;z-index:100;padding:16px;backdrop-filter:blur(3px)}
-.mb{background:var(--wh);border-radius:14px;padding:26px;width:100%;max-width:500px;box-shadow:var(--s3);max-height:92vh;overflow-y:auto}
-.mtitle{font-size:17px;font-weight:900;margin-bottom:18px;color:var(--dk)}
-.mtitle .ac{color:var(--a)}
-.ma{display:flex;gap:8px;margin-top:18px}
-.dv{display:flex;align-items:center;gap:10px;margin:16px 0 12px}
-.dv span{font-size:10px;font-weight:700;color:var(--md);text-transform:uppercase;letter-spacing:.1em;white-space:nowrap}
-.dv::before,.dv::after{content:'';flex:1;height:1px;background:var(--br)}
-#toast{position:fixed;bottom:22px;right:22px;padding:11px 18px;border-radius:var(--r);color:#fff;font-weight:700;font-size:13px;z-index:200;box-shadow:var(--s2);display:none;animation:su .3s ease}
-@keyframes su{from{transform:translateY(16px);opacity:0}to{transform:translateY(0);opacity:1}}
-.empty{color:var(--md);font-size:13px;padding:38px 0;text-align:center}
-.empty i{font-size:30px;display:block;margin-bottom:10px;font-style:normal}
-.info{padding:11px 14px;background:var(--pl);border-radius:var(--rs);border-left:3px solid var(--p);font-size:12px;color:var(--p);margin-top:10px}
-.info-o{background:var(--al);border-left-color:var(--a);color:#7a3a05}
-.ii{padding:6px 10px;border:1.5px solid var(--br);border-radius:var(--rs);font-size:19px;font-weight:900;font-family:'Lato',sans-serif;outline:none}
-.ii:focus{border-color:var(--p)}
-.lr{display:flex;gap:8px;align-items:center;font-size:12px;padding:4px 0;border-bottom:1px solid #f5f5f5;flex-wrap:wrap}
-.lr:last-child{border-bottom:none}
-.cw{margin-bottom:8px}
-.cl-lbl{font-size:10px;font-weight:700;color:var(--md);text-transform:uppercase;letter-spacing:.08em;margin-bottom:5px}
-#mob-ov{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:49}
-#mob-ov.open{display:block}
-@media(max-width:768px){
-  #mh{display:flex}
-  #sb{position:fixed;left:0;top:56px;height:calc(100vh - 56px);z-index:50;transform:translateX(-100%)}
-  #sb.open{transform:translateX(0);box-shadow:var(--s3)}
-  .page{padding:16px 14px}.pt{font-size:21px}
-  .sr{gap:8px}.sc{padding:12px 14px}.sv{font-size:26px}
-  .eg{grid-template-columns:1fr}.eg .s2{grid-column:1}
-  .cg{grid-template-columns:1fr 1fr}
-  .sins input{width:55px}
-  .bmg{grid-template-columns:1fr 1fr}
+* { box-sizing:border-box; margin:0; padding:0; -webkit-tap-highlight-color:transparent; }
+body { font-family:'Lato',sans-serif; background:var(--bg); color:var(--dk); height:100vh; overflow:hidden; display:flex; flex-direction:column; }
+
+/* MOBILE HEADER */
+#mob-hdr { display:none; align-items:center; gap:12px; padding:0 16px; height:56px; background:var(–p); flex-shrink:0; z-index:40; }
+#mob-hdr button { background:none; border:none; color:#fff; font-size:22px; cursor:pointer; }
+.mob-name { color:#fff; font-size:15px; font-weight:700; }
+.mob-name .ac { color:var(–a); }
+.mob-sub { color:rgba(255,255,255,.5); font-size:9px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; }
+
+/* LAYOUT */
+#wrap { display:flex; flex:1; overflow:hidden; }
+
+/* SIDEBAR */
+#sb { width:248px; min-width:248px; background:var(–p); display:flex; flex-direction:column; height:100%; overflow-y:auto; transition:transform .3s; }
+.sb-logo { padding:22px 20px 16px; border-bottom:1px solid rgba(255,255,255,.1); }
+.sb-dr { font-size:13px; color:var(–a); font-weight:700; }
+.sb-name { font-size:18px; font-weight:900; color:#fff; letter-spacing:-.3px; }
+.sb-job { font-size:9px; color:rgba(255,255,255,.4); font-weight:700; letter-spacing:.15em; text-transform:uppercase; margin-top:3px; }
+.sb-sec { font-size:9px; font-weight:700; color:rgba(255,255,255,.35); letter-spacing:.12em; padding:14px 20px 5px; text-transform:uppercase; }
+.sb-btn { display:flex; align-items:center; gap:9px; padding:9px 12px; margin:2px 8px; border-radius:var(–rs); border:none; background:none; cursor:pointer; text-align:left; color:rgba(255,255,255,.7); font-size:13px; font-family:‘Lato’,sans-serif; width:calc(100% - 16px); transition:all .15s; }
+.sb-btn:hover { background:rgba(255,255,255,.08); color:#fff; }
+.sb-btn.on { background:var(–a); color:#fff; font-weight:700; }
+.sb-btn .ic { font-size:14px; width:18px; text-align:center; flex-shrink:0; }
+.sb-btn .lb { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; flex:1; }
+.sb-cnt { background:rgba(255,255,255,.2); color:#fff; font-size:10px; padding:1px 6px; border-radius:10px; font-weight:700; }
+.sb-add { margin:6px 16px 0; padding:9px 12px; border-radius:var(–rs); border:1.5px dashed rgba(255,255,255,.2); background:none; color:rgba(255,255,255,.4); cursor:pointer; font-size:12px; font-family:‘Lato’,sans-serif; text-align:center; transition:all .15s; }
+.sb-add:hover { border-color:var(–a); color:var(–a); }
+.sb-foot { margin-top:auto; padding:14px 16px; border-top:1px solid rgba(255,255,255,.1); }
+.sb-bk { display:block; width:100%; padding:8px 10px; border-radius:var(–rs); border:1px solid rgba(255,255,255,.15); background:rgba(255,255,255,.06); color:rgba(255,255,255,.6); cursor:pointer; font-size:11px; font-family:‘Lato’,sans-serif; font-weight:700; text-align:center; margin-bottom:5px; transition:all .15s; }
+.sb-bk:hover { background:rgba(255,255,255,.12); color:#fff; }
+.sb-note { font-size:9px; color:rgba(255,255,255,.25); text-align:center; letter-spacing:.08em; text-transform:uppercase; margin-top:6px; }
+
+/* MAIN */
+#main { flex:1; overflow-y:auto; }
+.page { padding:28px 32px; max-width:960px; }
+.ey { font-size:10px; font-weight:700; color:var(–a); letter-spacing:.15em; text-transform:uppercase; margin-bottom:5px; }
+.ttl { font-size:26px; font-weight:900; letter-spacing:-.5px; margin-bottom:3px; }
+.ttl .ac { color:var(–a); }
+.sub { font-size:13px; color:var(–md); margin-bottom:22px; }
+.ph { display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:22px; flex-wrap:wrap; gap:10px; }
+
+/* STATS */
+.stats { display:flex; gap:12px; margin-bottom:26px; flex-wrap:wrap; }
+.stat { background:var(–wh); border:1px solid var(–br); border-radius:var(–r); padding:16px 20px; flex:1; min-width:105px; box-shadow:0 1px 4px rgba(1,68,98,.08); position:relative; overflow:hidden; }
+.stat::before { content:’’; position:absolute; top:0; left:0; right:0; height:3px; background:var(–p); }
+.stat.ac::before { background:var(–a); }
+.stat.dk::before { background:var(–dk); }
+.stat-i { font-size:18px; margin-bottom:7px; }
+.stat-v { font-size:30px; font-weight:900; color:var(–p); line-height:1; }
+.stat.ac .stat-v { color:var(–a); }
+.stat.dk .stat-v { color:var(–dk); }
+.stat-l { font-size:10px; color:var(–md); margin-top:3px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; }
+
+/* CARDS */
+.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr)); gap:12px; }
+.card { background:var(–wh); border:1px solid var(–br); border-radius:var(–r); padding:16px; cursor:pointer; transition:box-shadow .2s,transform .15s; box-shadow:0 1px 4px rgba(1,68,98,.08); position:relative; overflow:hidden; }
+.card::after { content:’’; position:absolute; bottom:0; left:0; right:0; height:3px; background:var(–p); transform:scaleX(0); transition:transform .2s; }
+.card:hover { box-shadow:0 4px 18px rgba(1,68,98,.13); transform:translateY(-2px); }
+.card:hover::after { transform:scaleX(1); }
+.card-tp { font-size:9px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(–a); margin-bottom:5px; }
+.card-nm { font-weight:900; font-size:15px; margin-bottom:4px; }
+.card-mt { font-size:11px; color:var(–md); margin-top:2px; }
+
+/* TABS */
+.tabs { display:flex; margin-bottom:20px; border-bottom:2px solid var(–br); flex-wrap:wrap; }
+.tab { padding:9px 14px; border:none; background:none; cursor:pointer; font-size:11px; font-family:‘Lato’,sans-serif; color:var(–md); border-bottom:2px solid transparent; margin-bottom:-2px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; transition:color .15s; }
+.tab:hover { color:var(–dk); }
+.tab.on { color:var(–p); border-bottom:2px solid var(–p); }
+
+/* SCHEDA */
+.day { background:var(–wh); border:1px solid var(–br); border-radius:var(–r); margin-bottom:10px; overflow:hidden; box-shadow:0 1px 4px rgba(1,68,98,.08); }
+.day-hdr { display:flex; align-items:center; justify-content:space-between; padding:13px 16px; cursor:pointer; border-left:4px solid var(–p); user-select:none; }
+.day-hdr:hover { background:#fafafa; }
+.day-name { font-weight:900; font-size:14px; border:none; outline:none; background:transparent; cursor:text; font-family:‘Lato’,sans-serif; color:var(–dk); width:160px; }
+.day-body { padding:8px 12px 14px; background:#f9fafc; border-top:1px solid var(–br); }
+
+.ex { background:var(–wh); border:1px solid var(–br); border-radius:var(–rs); margin-bottom:7px; overflow:hidden; }
+.ex-hdr { display:flex; align-items:center; justify-content:space-between; padding:10px 12px; cursor:pointer; user-select:none; }
+.ex-hdr:hover { background:#fafafa; }
+.ex-body { padding:13px 15px; border-top:1px solid var(–br); background:#fdfdfd; }
+.ex-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+
+/* CLIENT WEIGHTS */
+.cw-row { display:flex; align-items:center; gap:7px; padding:7px 0; border-bottom:1px solid #f0f0f0; }
+.cw-row:last-child { border-bottom:none; }
+.cw-nm { font-weight:700; font-size:12px; flex:1; }
+.cw-in { width:58px; padding:5px; font-size:12px; text-align:center; border:1.5px solid var(–br); border-radius:6px; font-family:‘Lato’,sans-serif; }
+.cw-in:focus { border-color:var(–a); outline:none; }
+.cw-u { font-size:10px; color:var(–md); font-weight:700; }
+
+/* SESSION */
+.ses-ban { background:var(–p); color:#fff; padding:14px 18px; border-radius:var(–r); margin-bottom:16px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; }
+.ses-ban h3 { font-size:15px; font-weight:900; margin-bottom:2px; }
+.ses-ban p { font-size:12px; opacity:.7; }
+.ses-ex { background:var(–wh); border:1px solid var(–br); border-radius:var(–r); margin-bottom:10px; overflow:hidden; box-shadow:0 1px 4px rgba(1,68,98,.08); }
+.ses-exh { padding:12px 16px; border-left:4px solid var(–a); background:#fafafa; }
+.ses-row { display:flex; align-items:center; gap:8px; padding:10px 16px; border-bottom:1px solid var(–br); flex-wrap:wrap; }
+.ses-row:last-child { border-bottom:none; }
+.ses-nm { font-weight:700; font-size:13px; flex:1; min-width:80px; }
+.ses-in { width:62px; padding:6px 7px; font-size:13px; border:1.5px solid var(–br); border-radius:6px; font-family:‘Lato’,sans-serif; text-align:center; }
+.ses-in:focus { border-color:var(–a); outline:none; }
+.ses-u { font-size:10px; color:var(–md); font-weight:700; }
+.ses-hist { background:var(–wh); border:1px solid var(–br); border-radius:var(–r); margin-bottom:8px; overflow:hidden; box-shadow:0 1px 4px rgba(1,68,98,.08); }
+.ses-hist-hdr { display:flex; align-items:center; justify-content:space-between; padding:12px 16px; cursor:pointer; border-left:4px solid var(–ok); }
+.ses-hist-hdr:hover { background:#fafafa; }
+
+/* BENCHMARKS */
+.bm-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:12px; margin-bottom:22px; }
+.bm-card { background:var(–wh); border:1px solid var(–br); border-radius:var(–r); padding:16px; box-shadow:0 1px 4px rgba(1,68,98,.08); }
+.bm-nm { font-weight:700; font-size:13px; margin-bottom:3px; }
+.bm-val { font-size:28px; font-weight:900; color:var(–p); line-height:1; }
+.bm-card.hd .bm-val { color:var(–a); }
+.bm-u { font-size:11px; color:var(–md); font-weight:700; margin-left:3px; }
+.bm-dt { font-size:11px; color:var(–md); margin-top:3px; }
+.bm-tr { font-size:12px; font-weight:700; margin-top:4px; }
+.tr-up { color:var(–ok); } .tr-dn { color:var(–dn); }
+
+/* TEMPLATES */
+.tpl { background:var(–wh); border:1px solid var(–br); border-radius:var(–r); margin-bottom:10px; overflow:hidden; box-shadow:0 1px 4px rgba(1,68,98,.08); }
+.tpl-hdr { display:flex; align-items:center; justify-content:space-between; padding:12px 16px; cursor:pointer; border-left:4px solid var(–a); }
+.tpl-hdr:hover { background:#fafafa; }
+
+/* FORMS */
+.fl { font-size:10px; font-weight:700; color:var(–md); text-transform:uppercase; letter-spacing:.08em; margin-bottom:4px; }
+input[type=text], input[type=number], input[type=date], select, textarea {
+width:100%; padding:8px 10px; border:1.5px solid var(–br); border-radius:var(–rs);
+font-size:13px; font-family:‘Lato’,sans-serif; outline:none; background:var(–wh); color:var(–dk); transition:border-color .15s;
 }
-@media(max-width:400px){.cg{grid-template-columns:1fr}.bmg{grid-template-columns:1fr}}
-::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:#d0d0d0;border-radius:3px}
+input:focus, select:focus, textarea:focus { border-color:var(–p); box-shadow:0 0 0 3px rgba(1,68,98,.07); }
+textarea { resize:vertical; min-height:54px; }
+
+/* BUTTONS */
+.btn { padding:9px 18px; border-radius:var(–rs); border:none; cursor:pointer; font-size:13px; font-family:‘Lato’,sans-serif; font-weight:700; transition:all .15s; }
+.btn:active { transform:scale(.97); }
+.btn-p { background:var(–p); color:#fff; } .btn-p:hover { background:#013652; }
+.btn-a { background:var(–a); color:#fff; } .btn-a:hover { background:#d4690c; }
+.btn-g { background:transparent; color:var(–md); border:1.5px solid var(–br); }
+.btn-d { background:var(–dl); color:var(–dn); border:1px solid #f5c6c6; font-size:12px; padding:7px 13px; }
+.btn-add { background:var(–pl); color:var(–p); border:1.5px dashed #a8c8d8; padding:9px 14px; border-radius:var(–rs); cursor:pointer; font-size:11px; font-weight:700; font-family:‘Lato’,sans-serif; letter-spacing:.03em; text-transform:uppercase; transition:all .15s; }
+.btn-add:hover { background:#d0e8f2; border-color:var(–p); }
+.btn-i { padding:5px 9px; background:var(–pl); color:var(–p); border:none; border-radius:6px; cursor:pointer; font-size:13px; }
+.btn-ia { padding:5px 9px; background:var(–al); color:var(–a); border:none; border-radius:6px; cursor:pointer; font-size:13px; }
+.btn-id { padding:5px 9px; background:var(–dl); color:var(–dn); border:none; border-radius:6px; cursor:pointer; font-size:13px; }
+
+/* BADGES */
+.bdg { font-size:10px; background:var(–pl); color:var(–p); padding:2px 8px; border-radius:20px; font-weight:700; white-space:nowrap; }
+.bdg-a { background:var(–al); color:var(–a); }
+.bdg-ok { background:var(–ol); color:var(–ok); }
+.bdg-m { background:#f0f0f0; color:var(–md); }
+
+/* DOTS */
+.dot { display:inline-block; width:7px; height:7px; border-radius:50%; flex-shrink:0; }
+.d-forza { background:var(–p); } .d-cardio { background:var(–a); } .d-mobilita { background:#1a7a4a; }
+.d-ipertrofia { background:#6c3483; } .d-potenza { background:#c0392b; } .d-core { background:var(–md); } .d-stretching { background:#17a589; }
+
+/* TYPE BTNS */
+.tbtn { padding:8px 14px; border:1.5px solid var(–br); border-radius:var(–rs); cursor:pointer; background:var(–wh); font-size:12px; font-family:‘Lato’,sans-serif; font-weight:700; transition:all .15s; }
+.tbtn.on { border-color:var(–p); background:var(–pl); color:var(–p); }
+
+/* MODAL */
+.ov { position:fixed; inset:0; background:rgba(1,68,98,.4); display:flex; align-items:center; justify-content:center; z-index:100; padding:16px; backdrop-filter:blur(3px); }
+.modal { background:var(–wh); border-radius:14px; padding:26px; width:100%; max-width:500px; box-shadow:0 16px 48px rgba(1,68,98,.18); max-height:92vh; overflow-y:auto; }
+.modal-t { font-size:17px; font-weight:900; margin-bottom:18px; }
+.modal-t .ac { color:var(–a); }
+.modal-a { display:flex; gap:8px; margin-top:18px; }
+
+/* DIVIDER */
+.dv { display:flex; align-items:center; gap:10px; margin:16px 0 12px; }
+.dv span { font-size:10px; font-weight:700; color:var(–md); text-transform:uppercase; letter-spacing:.1em; white-space:nowrap; }
+.dv::before, .dv::after { content:’’; flex:1; height:1px; background:var(–br); }
+
+/* TOAST */
+#toast { position:fixed; bottom:22px; right:22px; padding:11px 18px; border-radius:var(–r); color:#fff; font-weight:700; font-size:13px; z-index:200; box-shadow:0 4px 18px rgba(1,68,98,.13); display:none; animation:up .3s ease; }
+@keyframes up { from { transform:translateY(16px); opacity:0; } to { transform:translateY(0); opacity:1; } }
+
+.empty { color:var(–md); font-size:13px; padding:38px 0; text-align:center; }
+.empty i { font-size:30px; display:block; margin-bottom:10px; font-style:normal; }
+.info { padding:11px 14px; background:var(–pl); border-radius:var(–rs); border-left:3px solid var(–p); font-size:12px; color:var(–p); margin-top:10px; }
+.info-a { background:var(–al); border-left-color:var(–a); color:#7a3a05; }
+.log-row { display:flex; gap:8px; align-items:center; font-size:12px; padding:4px 0; border-bottom:1px solid #f5f5f5; flex-wrap:wrap; }
+.log-row:last-child { border-bottom:none; }
+.ii { padding:6px 10px; border:1.5px solid var(–br); border-radius:var(–rs); font-size:19px; font-weight:900; font-family:‘Lato’,sans-serif; outline:none; }
+.ii:focus { border-color:var(–p); }
+
+/* MOBILE */
+#mob-ov { display:none; position:fixed; inset:0; background:rgba(0,0,0,.5); z-index:49; }
+#mob-ov.open { display:block; }
+@media(max-width:768px) {
+#mob-hdr { display:flex; }
+#sb { position:fixed; left:0; top:56px; height:calc(100vh - 56px); z-index:50; transform:translateX(-100%); }
+#sb.open { transform:translateX(0); box-shadow:0 16px 48px rgba(1,68,98,.18); }
+.page { padding:16px 14px; }
+.ttl { font-size:21px; }
+.stats { gap:8px; }
+.stat { padding:12px 14px; }
+.stat-v { font-size:26px; }
+.ex-grid { grid-template-columns:1fr; }
+.grid { grid-template-columns:1fr 1fr; }
+.ses-in { width:55px; }
+.bm-grid { grid-template-columns:1fr 1fr; }
+}
+@media(max-width:400px) { .grid { grid-template-columns:1fr; } .bm-grid { grid-template-columns:1fr; } }
+::-webkit-scrollbar { width:5px; } ::-webkit-scrollbar-track { background:transparent; } ::-webkit-scrollbar-thumb { background:#d0d0d0; border-radius:3px; }
 </style>
+
 </head>
 <body>
 <div id="mob-ov" onclick="closeSB()"></div>
-<div id="mh">
-  <button id="mt" onclick="toggleSB()">☰</button>
-  <div><div class="mlt"><span style="color:#EB750E">dr.</span> Mattia Lantero</div><div class="mls">Chinesiologo</div></div>
+
+<div id="mob-hdr">
+  <button onclick="toggleSB()">☰</button>
+  <div><div class="mob-name"><span class="ac">dr.</span> Mattia Lantero</div><div class="mob-sub">Chinesiologo</div></div>
 </div>
-<div id="bw">
+
+<div id="wrap">
 <aside id="sb">
-  <div class="slogo"><div class="sdr">dr.</div><div class="snm">Mattia Lantero</div><div class="ssb">Chinesiologo</div></div>
+  <div class="sb-logo">
+    <div class="sb-dr">dr.</div>
+    <div class="sb-name">Mattia Lantero</div>
+    <div class="sb-job">Chinesiologo</div>
+  </div>
   <nav style="flex:1;display:flex;flex-direction:column">
-    <button class="ni active" id="n-dash" onclick="vDash()"><span class="ic">🏠</span><span class="lb">Dashboard</span></button>
-    <div class="ns">Clienti</div>
-    <button class="ni" id="n-cli" onclick="vCli()"><span class="ic">👤</span><span class="lb">Archivio Clienti</span></button>
-    <div class="ns">Gruppi & Sessioni</div>
-    <div id="n-grp"></div>
-    <button class="ab" onclick="oModal('ng')">+ Nuovo gruppo</button>
-    <div class="ns">Libreria</div>
-    <button class="ni" id="n-tpl" onclick="vTpl()"><span class="ic">📦</span><span class="lb">Blocchi Template</span></button>
+    <button class="sb-btn on" id="nb-dash" onclick="goDash()"><span class="ic">🏠</span><span class="lb">Dashboard</span></button>
+    <div class="sb-sec">Clienti</div>
+    <button class="sb-btn" id="nb-cli" onclick="goCli()"><span class="ic">👤</span><span class="lb">Archivio Clienti</span></button>
+    <div class="sb-sec">Gruppi</div>
+    <div id="nb-grp"></div>
+    <button class="sb-add" onclick="openModal('grp')">+ Nuovo gruppo</button>
+    <div class="sb-sec">Libreria</div>
+    <button class="sb-btn" id="nb-tpl" onclick="goTpl()"><span class="ic">📦</span><span class="lb">Template</span></button>
   </nav>
-  <div class="sfooter">
-    <div class="ns" style="padding:0 0 7px">Backup</div>
-    <button class="bb" onclick="expD()">📤 Esporta dati</button>
-    <label class="bb" style="cursor:pointer">📥 Importa dati<input type="file" accept=".json" style="display:none" onchange="impD(event)"></label>
-    <div class="bbl">Salvataggio automatico attivo</div>
+  <div class="sb-foot">
+    <div class="sb-sec" style="padding:0 0 7px">Backup</div>
+    <button class="sb-bk" onclick="expD()">📤 Esporta dati</button>
+    <label class="sb-bk" style="cursor:pointer">📥 Importa dati<input type="file" accept=".json" style="display:none" onchange="impD(event)"></label>
+    <div class="sb-note">Salvataggio automatico</div>
   </div>
 </aside>
+
 <div id="main"><div id="cnt"></div></div>
 </div>
-<div class="ov" id="modal" style="display:none" onclick="cmo(event)"><div class="mb" id="mb"></div></div>
+
+<div class="ov" id="modal" style="display:none" onclick="if(event.target===this)closeModal()">
+  <div class="modal" id="modal-box"></div>
+</div>
 <div id="toast"></div>
 
 <script>
-const SK='dml_v6';
-let S=lS();
-let CV='dash',CG=null,CT='scheda';
-let xD=new Set(),xE=new Set();
+// ── STATE ──────────────────────────────────────────────────────────────
+var SK = 'dml_v8';
+var S = (function() {
+  try { var r = localStorage.getItem(SK); return r ? JSON.parse(r) : {groups:[],clients:[],templates:[]}; }
+  catch(e) { return {groups:[],clients:[],templates:[]}; }
+})();
+var VIEW = 'dash', GID = null, TAB = 'scheda';
+var OPEN_DAYS = {}, OPEN_EXS = {};
 
-function lS(){try{const r=localStorage.getItem(SK);return r?JSON.parse(r):{groups:[],clients:[],templates:[]}}catch{return{groups:[],clients:[],templates:[]}}}
-function sS(){try{localStorage.setItem(SK,JSON.stringify(S))}catch{}}
-const uid=()=>Math.random().toString(36).slice(2,9);
-const td=()=>new Date().toISOString().slice(0,10);
-const fd=d=>d?new Date(d+'T12:00:00').toLocaleDateString('it-IT'):'—';
-const G=()=>S.groups.find(g=>g.id===CG);
-const c2c=c=>({forza:'cf',cardio:'cc','mobilità':'cm',ipertrofia:'ci',potenza:'cp',core:'co',stretching:'csr'}[c]||'cf');
-const tL=t=>({group:'Small Group',single:'Singolo',couple:'Coppia'}[t]||t);
-const esc=s=>String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-const set=h=>document.getElementById('cnt').innerHTML=h;
+function save() { try { localStorage.setItem(SK, JSON.stringify(S)); } catch(e) {} }
+function uid() { return Math.random().toString(36).slice(2,9); }
+function today() { return new Date().toISOString().slice(0,10); }
+function fd(d) { return d ? new Date(d+'T12:00:00').toLocaleDateString('it-IT') : '—'; }
+function G() { return S.groups.filter(function(g){ return g.id===GID; })[0]; }
+function h(s) { return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+function tL(t) { return {group:'Small Group',single:'Singolo',couple:'Coppia'}[t]||t; }
+function catCls(c) { return {forza:'d-forza',cardio:'d-cardio','mobilità':'d-mobilita',ipertrofia:'d-ipertrofia',potenza:'d-potenza',core:'d-core',stretching:'d-stretching'}[c]||'d-forza'; }
+function gCli() { var g=G(); if(!g) return []; return (g.clients||[]).map(function(id){ return (S.clients||[]).filter(function(c){return c.id===id;})[0]; }).filter(Boolean); }
+function set(html) { document.getElementById('cnt').innerHTML = html; }
 
-const BMS=[
+// Toast
+var TT;
+function toast(msg,col) { var t=document.getElementById('toast'); t.textContent=msg; t.style.background=col||'#014462'; t.style.display='block'; clearTimeout(TT); TT=setTimeout(function(){t.style.display='none';},2800); }
+
+// Sidebar
+function rNav() {
+  document.getElementById('nb-grp').innerHTML = S.groups.map(function(g) {
+    var on = GID===g.id && VIEW==='grp';
+    var ic = g.type==='group'?'👥':g.type==='couple'?'👫':'👤';
+    return '<button class="sb-btn'+(on?' on':'')+'" onclick="goGrp(\''+g.id+'\')"><span class="ic">'+ic+'</span><span class="lb">'+h(g.name)+'</span>'+(g.clients&&g.clients.length?'<span class="sb-cnt">'+g.clients.length+'</span>':'')+'</button>';
+  }).join('');
+  ['dash','cli','tpl'].forEach(function(k) {
+    var el = document.getElementById('nb-'+k);
+    if(el) el.className = 'sb-btn'+(VIEW===k?' on':'');
+  });
+}
+function toggleSB() { document.getElementById('sb').classList.toggle('open'); document.getElementById('mob-ov').classList.toggle('open'); }
+function closeSB() { document.getElementById('sb').classList.remove('open'); document.getElementById('mob-ov').classList.remove('open'); }
+
+// ── BENCHMARKS ──────────────────────────────────────────────────────────
+var DEF_BM = [
   {id:'stacco',name:'Massimale Stacco',unit:'kg',icon:'🏋️',hb:true},
   {id:'panca',name:'Massimale Panca Piana',unit:'kg',icon:'💪',hb:true},
   {id:'trazioni',name:'Trazioni corpo libero',unit:'reps',icon:'🔝',hb:true},
@@ -227,617 +313,579 @@ const BMS=[
   {id:'vog1k',name:'Vogatore 1km',unit:'min:sec',icon:'🚣',hb:false},
   {id:'ecobike',name:'Watt max Ecobike',unit:'W',icon:'🚴',hb:true},
 ];
+function getBMs(client) { return DEF_BM.concat(client.customBenchmarks||[]); }
 
-let TT;
-function toast(msg,col='#014462'){const t=document.getElementById('toast');t.textContent=msg;t.style.background=col;t.style.display='block';clearTimeout(TT);TT=setTimeout(()=>t.style.display='none',2800)}
-
-function rNav(){
-  document.getElementById('n-grp').innerHTML=S.groups.map(g=>`
-    <button class="ni ${CG===g.id&&CV==='group'?'active':''}" onclick="vGroup('${g.id}')">
-      <span class="ic">${g.type==='group'?'👥':g.type==='couple'?'👫':'👤'}</span>
-      <span class="lb">${esc(g.name)}</span>
-      ${g.clients?.length?`<span class="nb">${g.clients.length}</span>`:''}
-    </button>`).join('');
-  ['dash','cli','tpl'].forEach(k=>{const el=document.getElementById('n-'+k);if(el)el.className='ni'+(CV===k?' active':'')});
-}
-function toggleSB(){document.getElementById('sb').classList.toggle('open');document.getElementById('mob-ov').classList.toggle('open')}
-function closeSB(){document.getElementById('sb').classList.remove('open');document.getElementById('mob-ov').classList.remove('open')}
-
-// DASHBOARD
-function vDash(){CV='dash';CG=null;rNav();closeSB();
-  const tot=S.groups.reduce((s,g)=>s+(g.sessions?.length||0),0);
-  set(`<div class="page">
-    <div class="eyebrow">Pannello di controllo</div>
-    <h1 class="pt"><span class="ac">dr.</span> Mattia Lantero</h1>
-    <div class="ps">Gestione schede allenamento — Chinesiologo</div>
-    <div class="sr">
-      <div class="sc"><div class="sic">👥</div><div class="sv">${S.groups.length}</div><div class="slb">Gruppi</div></div>
-      <div class="sc o"><div class="sic">👤</div><div class="sv">${(S.clients||[]).length}</div><div class="slb">Clienti</div></div>
-      <div class="sc d"><div class="sic">⚡</div><div class="sv">${tot}</div><div class="slb">Sessioni</div></div>
-    </div>
-    ${S.groups.length===0?`<div class="empty"><i>💪</i>Nessun gruppo ancora.<br>Clicca <strong>"+ Nuovo gruppo"</strong>!</div>`:`
-    <div class="dv"><span>Gruppi attivi</span></div>
-    <div class="cg">${S.groups.map(g=>{
-      const cls=(S.clients||[]).filter(c=>g.clients?.includes(c.id));
-      const ls=g.sessions?.slice(-1)[0];
-      return`<div class="gc" onclick="vGroup('${g.id}')">
-        <div class="gct">${tL(g.type)}</div>
-        <div class="gcn">${esc(g.name)}</div>
-        <div class="gcm">${cls.length?cls.slice(0,3).map(c=>esc(c.name)).join(', ')+(cls.length>3?` +${cls.length-3}`:''):'Nessun cliente'}</div>
-        <div style="margin-top:8px;display:flex;gap:5px;flex-wrap:wrap">
-          ${g.days?.length?`<span class="badge">${g.days.length} giorni</span>`:`<span class="badge bm">No scheda</span>`}
-          ${ls?`<span class="badge bs">Ult: ${fd(ls.date)}</span>`:''}
-        </div>
-      </div>`}).join('')}</div>`}
-  </div>`)}
-
-// CLIENTI
-function vCli(){CV='cli';CG=null;rNav();closeSB();rCliP()}
-function rCliP(){
-  const c=S.clients||[];
-  set(`<div class="page">
-    <div class="eyebrow">Archivio</div><h1 class="pt">Clienti</h1>
-    <div class="ps">Gestisci clienti e monitora i benchmark fondamentali</div>
-    <div style="display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap">
-      <input type="text" id="nc" placeholder="Nome cliente" style="max-width:240px;flex:1" onkeydown="if(event.key==='Enter')addCli()">
-      <button class="btn bp" onclick="addCli()">+ Aggiungi</button>
-    </div>
-    ${c.length===0?`<div class="empty"><i>👤</i>Nessun cliente ancora.</div>`:`
-    <div class="cg">${c.map(x=>{
-      const gs=S.groups.filter(g=>g.clients?.includes(x.id));
-      return`<div class="gc" onclick="vClient('${x.id}')">
-        <div class="gct">Cliente</div><div class="gcn">${esc(x.name)}</div>
-        <div class="gcm">Dal ${fd(x.joinDate)}</div>
-        ${gs.length?`<div style="margin-top:7px;display:flex;gap:4px;flex-wrap:wrap">${gs.map(g=>`<span class="badge">${esc(g.name)}</span>`).join('')}</div>`:''}
-        <div style="margin-top:8px;font-size:11px;color:var(--a);font-weight:700">Profilo →</div>
-      </div>`}).join('')}</div>`}
-  </div>`)}
-
-function addCli(){
-  const inp=document.getElementById('nc');if(!inp?.value?.trim())return;
-  S.clients=S.clients||[];
-  S.clients.push({id:uid(),name:inp.value.trim(),joinDate:td(),benchmarks:{}});
-  sS();rCliP();rNav();toast('Cliente aggiunto! 👤')
+// ── CHART ──────────────────────────────────────────────────────────────
+function chart(pts,color,W,H) {
+  W=W||220; H=H||60;
+  var vals = pts.filter(function(p){return !isNaN(p.v);});
+  if(vals.length<2) return '';
+  var maxY=Math.max.apply(null,vals.map(function(p){return p.v;}));
+  var minY=Math.min.apply(null,vals.map(function(p){return p.v;}));
+  var pad=8;
+  function px(i){return pad+(i/(vals.length-1))*(W-2*pad);}
+  function py(v){return H-pad-((v-minY)/((maxY-minY)||1))*(H-2*pad);}
+  var pts2=vals.map(function(p,i){return px(i)+','+py(p.v);}).join(' ');
+  var area=px(vals.length-1)+','+(H-pad)+' '+px(0)+','+(H-pad);
+  var gid='g'+uid();
+  return '<div style="margin-bottom:8px"><svg width="'+W+'" height="'+H+'" style="display:block;overflow:visible">'
+    +'<defs><linearGradient id="'+gid+'" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="'+color+'" stop-opacity="0.15"/><stop offset="100%" stop-color="'+color+'" stop-opacity="0"/></linearGradient></defs>'
+    +'<polygon fill="url(#'+gid+')" points="'+pts2+' '+area+'"/>'
+    +'<polyline fill="none" stroke="'+color+'" stroke-width="2.5" stroke-linejoin="round" points="'+pts2+'"/>'
+    +vals.map(function(p,i){return '<circle cx="'+px(i)+'" cy="'+py(p.v)+'" r="3.5" fill="'+color+'" stroke="white" stroke-width="1.5"/>';}).join('')
+    +'</svg><div style="display:flex;justify-content:space-between;font-size:10px;color:#bbb;margin-top:2px"><span>'+h(vals[0].date)+'</span><span style="font-weight:700;color:'+color+'">'+vals[vals.length-1].v+'</span><span>'+h(vals[vals.length-1].date)+'</span></div></div>';
 }
 
-// CLIENT PROFILE
-function vClient(cid){
-  CV='client';CG=null;rNav();closeSB();
-  const c=(S.clients||[]).find(x=>x.id===cid);if(!c)return;
-  const gs=S.groups.filter(g=>g.clients?.includes(cid));
-  const bm=c.benchmarks||{};
-  const cards=BMS.map(b=>{
-    const logs=bm[b.id]||[];
-    const last=logs[logs.length-1],prev=logs[logs.length-2];
-    let trend='';
-    if(last&&prev){
-      const v1=parseFloat(String(last.v).replace(':','.'));
-      const v2=parseFloat(String(prev.v).replace(':','.'));
-      const better=b.hb?(v1>v2):(v1<v2);
-      trend=`<div class="bmt ${better?'tup':'tdn'}">${better?'↑ Migliorato':'↓ Peggiorato'}</div>`;
-    }
-    const cd=logs.map(l=>{let v=String(l.v);if(v.includes(':')){const p=v.split(':');v=String(parseInt(p[0])*60+parseInt(p[1]||0))}return{date:l.date,value:parseFloat(v)||0}});
-    return`<div class="bmc ${last?'hd':''}">
-      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px">
-        <div class="bmn">${b.icon} ${b.name}</div>
-        <button class="bia" style="font-size:11px;padding:4px 8px" onclick="oBmM('${cid}','${b.id}')">+ Log</button>
-      </div>
-      ${last?`<div><span class="bmv">${esc(String(last.v))}</span><span class="bmu">${b.unit}</span></div>
-      <div class="bmd">${fd(last.date)}</div>${trend}
-      ${cd.length>=2?rChart(cd,220,60,'#014462'):''}
-      `:`<div style="color:var(--md);font-size:12px;margin-top:6px">Nessun dato ancora</div>`}
-    </div>`}).join('');
-  set(`<div class="page">
-    <div class="eyebrow">Profilo Cliente</div>
-    <div class="ph">
-      <div><h1 class="pt">${esc(c.name)}</h1>
-        <div class="ps">Dal ${fd(c.joinDate)}${gs.length?' · '+gs.map(g=>esc(g.name)).join(', '):''}</div>
-      </div>
-      <button class="btn bd" onclick="delCli('${cid}')">🗑 Elimina</button>
-    </div>
-    <div class="dv"><span>Benchmark fondamentali</span></div>
-    <div class="bmg">${cards}</div>
-  </div>`)}
-
-function oBmM(cid,bid){
-  const b=BMS.find(x=>x.id===bid);
-  document.getElementById('mb').innerHTML=`
-    <div class="mtitle">📊 <span class="ac">${b.name}</span></div>
-    <div class="fl">Valore (${b.unit})</div>
-    <input type="text" id="bv" placeholder="${b.unit==='min:sec'?'es. 7:30':b.unit==='reps'?'es. 12':'es. 100'}" style="margin-bottom:12px">
-    <div class="fl">Data</div>
-    <input type="date" id="bd" value="${td()}" style="margin-bottom:4px">
-    <div class="ma"><button class="btn bp" onclick="saveBm('${cid}','${bid}')">Salva</button><button class="btn bg" onclick="cm()">Annulla</button></div>`;
-  document.getElementById('modal').style.display='flex';
-  setTimeout(()=>document.getElementById('bv').focus(),100);
-}
-function saveBm(cid,bid){
-  const val=document.getElementById('bv').value.trim();const date=document.getElementById('bd').value;
-  if(!val)return;
-  const c=(S.clients||[]).find(x=>x.id===cid);
-  c.benchmarks=c.benchmarks||{};c.benchmarks[bid]=c.benchmarks[bid]||[];
-  c.benchmarks[bid].push({id:uid(),v:val,date:date||td()});
-  sS();cm();vClient(cid);toast('Benchmark salvato! 📊','#EB750E')
-}
-function delCli(cid){
-  if(!confirm('Eliminare?'))return;
-  S.clients=(S.clients||[]).filter(c=>c.id!==cid);
-  S.groups.forEach(g=>{g.clients=(g.clients||[]).filter(id=>id!==cid)});
-  sS();vCli();toast('Eliminato.','#c0392b')
+// ── DASHBOARD ──────────────────────────────────────────────────────────
+function goDash() {
+  VIEW='dash'; GID=null; rNav(); closeSB();
+  var tot = S.groups.reduce(function(s,g){return s+(g.sessions?g.sessions.length:0);},0);
+  var cards = S.groups.length===0
+    ? '<div class="empty"><i>💪</i>Nessun gruppo. Clicca <strong>"+ Nuovo gruppo"</strong>!</div>'
+    : '<div class="dv"><span>Gruppi attivi</span></div><div class="grid">'
+      + S.groups.map(function(g) {
+          var gc=(S.clients||[]).filter(function(c){return g.clients&&g.clients.indexOf(c.id)!==-1;});
+          var names=gc.length?gc.slice(0,3).map(function(c){return h(c.name);}).join(', ')+(gc.length>3?' +'+(gc.length-3):''):'Nessun cliente';
+          var ls=g.sessions&&g.sessions.length?g.sessions[g.sessions.length-1]:null;
+          return '<div class="card" onclick="goGrp(\''+g.id+'\')"><div class="card-tp">'+tL(g.type)+'</div><div class="card-nm">'+h(g.name)+'</div><div class="card-mt">'+names+'</div>'
+            +'<div style="margin-top:8px;display:flex;gap:5px;flex-wrap:wrap">'+(g.days&&g.days.length?'<span class="bdg">'+g.days.length+' giorni</span>':'<span class="bdg bdg-m">No scheda</span>')+(ls?'<span class="bdg bdg-ok">Ult: '+fd(ls.date)+'</span>':'')+'</div></div>';
+        }).join('')
+      + '</div>';
+  set('<div class="page"><div class="ey">Pannello di controllo</div><h1 class="ttl"><span class="ac">dr.</span> Mattia Lantero</h1><div class="sub">Gestione schede allenamento — Chinesiologo</div>'
+    +'<div class="stats"><div class="stat"><div class="stat-i">👥</div><div class="stat-v">'+S.groups.length+'</div><div class="stat-l">Gruppi</div></div>'
+    +'<div class="stat ac"><div class="stat-i">👤</div><div class="stat-v">'+((S.clients||[]).length)+'</div><div class="stat-l">Clienti</div></div>'
+    +'<div class="stat dk"><div class="stat-i">⚡</div><div class="stat-v">'+tot+'</div><div class="stat-l">Sessioni</div></div></div>'
+    +cards+'</div>');
 }
 
-// TEMPLATES
-function vTpl(){CV='tpl';CG=null;rNav();closeSB();rTplP()}
-function rTplP(){
-  const tpls=S.templates||[];
-  set(`<div class="page">
-    <div class="eyebrow">Libreria</div><h1 class="pt">Blocchi Template</h1>
-    <div class="ps">Blocchi riutilizzabili da inserire nelle schede con un click</div>
-    <button class="btn bp" style="margin-bottom:18px" onclick="oModal('ntpl')">+ Nuovo blocco</button>
-    ${tpls.length===0?`<div class="empty"><i>📦</i>Nessun template ancora.</div>`:`
-    ${tpls.map((t,i)=>`<div class="tblk">
-      <div class="tbh" onclick="togTpl(${i})">
-        <div><div style="font-weight:900;font-size:14px">${esc(t.name)}</div>
-          <div style="font-size:11px;color:var(--md);margin-top:2px">${t.exercises?.length||0} esercizi · <span class="badge bo">${esc(t.category||'Generico')}</span></div>
-        </div>
-        <div style="display:flex;gap:6px;align-items:center">
-          <span id="tc-${i}" style="color:var(--md)">▼</span>
-          <button class="bid" onclick="event.stopPropagation();delTpl(${i})">🗑</button>
-        </div>
-      </div>
-      <div id="tb-${i}" style="display:none;padding:12px 16px;border-top:1px solid var(--br);background:#fafafa">
-        ${(t.exercises||[]).map(ex=>`<div style="display:flex;align-items:center;gap:7px;padding:5px 0;border-bottom:1px solid #f0f0f0">
-          <span class="cd ${c2c(ex.category)}"></span>
-          <span style="font-size:13px;font-weight:700;flex:1">${esc(ex.name)}</span>
-          ${ex.sets?`<span class="badge">${esc(ex.sets)}×${esc(ex.reps||'')}</span>`:''}
-          ${ex.rest?`<span style="font-size:11px;color:var(--md)">rec. ${esc(ex.rest)}</span>`:''}
-        </div>`).join('')}
-      </div>
-    </div>`).join('')}`}
-  </div>`)}
-
-function togTpl(i){const b=document.getElementById(`tb-${i}`),c=document.getElementById(`tc-${i}`);const o=b.style.display!=='none';b.style.display=o?'none':'block';c.textContent=o?'▼':'▲'}
-function delTpl(i){if(!confirm('Eliminare?'))return;S.templates.splice(i,1);sS();rTplP();toast('Eliminato.','#c0392b')}
-
-// MODALS
-let _ngt='group',_tec=0,_logT={};
-function oModal(type){
-  if(type==='ng'){
-    _ngt='group';
-    document.getElementById('mb').innerHTML=`
-      <div class="mtitle">Nuovo <span class="ac">Gruppo</span></div>
-      <div class="fl" style="margin-bottom:6px">Tipo</div>
-      <div style="display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap">
-        <button class="tb active" id="t-group" onclick="sNGT('group')">👥 Small Group</button>
-        <button class="tb" id="t-single" onclick="sNGT('single')">👤 Singolo</button>
-        <button class="tb" id="t-couple" onclick="sNGT('couple')">👫 Coppia</button>
-      </div>
-      <div class="fl">Nome</div>
-      <input type="text" id="ng-n" placeholder="es. Small Group Lunedì" onkeydown="if(event.key==='Enter')crtGrp()">
-      <div class="ma"><button class="btn bp" onclick="crtGrp()">Crea</button><button class="btn bg" onclick="cm()">Annulla</button></div>`;
-    document.getElementById('modal').style.display='flex';
-    setTimeout(()=>document.getElementById('ng-n').focus(),100);
-  }
-  if(type==='ntpl'){
-    _tec=0;
-    document.getElementById('mb').innerHTML=`
-      <div class="mtitle">📦 Nuovo <span class="ac">Template</span></div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px">
-        <div><div class="fl">Nome</div><input type="text" id="tn" placeholder="es. Warm-up Forza"></div>
-        <div><div class="fl">Categoria</div>
-          <select id="tcat"><option>Riscaldamento</option><option>Forza</option><option>Cardio</option><option>Mobilità</option><option>Defaticamento</option><option>Potenza</option><option>Core</option></select>
-        </div>
-      </div>
-      <div class="dv"><span>Esercizi</span></div>
-      <div id="te-list"></div>
-      <button class="badd" onclick="addTE()" style="margin-bottom:12px">+ Aggiungi esercizio</button>
-      <div class="ma"><button class="btn bp" onclick="saveTpl()">Salva</button><button class="btn bg" onclick="cm()">Annulla</button></div>`;
-    document.getElementById('modal').style.display='flex';
-  }
-  if(type==='log'){
-    const g=G(),ex=g.days[_logT.di].exercises[_logT.ei];
-    document.getElementById('mb').innerHTML=`
-      <div class="mtitle">📈 Sessione — <span class="ac">${esc(ex.name)}</span></div>
-      <div class="eg">
-        <div><div class="fl">Carico (kg)</div><input type="number" id="lw" placeholder="80"></div>
-        <div><div class="fl">Reps eseguite</div><input type="number" id="lr" placeholder="10"></div>
-        <div><div class="fl">Durata (sec)</div><input type="number" id="ld" placeholder="30"></div>
-        <div><div class="fl">Distanza (m)</div><input type="number" id="ldi" placeholder="500"></div>
-        <div class="s2"><div class="fl">Data</div><input type="date" id="ldate" value="${td()}"></div>
-        <div class="s2"><div class="fl">Note</div><input type="text" id="ln" placeholder="es. ottima forma"></div>
-      </div>
-      <div class="ma"><button class="btn ba" onclick="saveLog()">Salva</button><button class="btn bg" onclick="cm()">Annulla</button></div>`;
-    document.getElementById('modal').style.display='flex';
-  }
+// ── CLIENTI ──────────────────────────────────────────────────────────
+function goCli() { VIEW='cli'; GID=null; rNav(); closeSB(); rCliPage(); }
+function rCliPage() {
+  var cli=S.clients||[];
+  set('<div class="page"><div class="ey">Archivio</div><h1 class="ttl">Clienti</h1><div class="sub">Gestisci clienti e benchmark fondamentali</div>'
+    +'<div style="display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap"><input type="text" id="new-cli" placeholder="Nome cliente" style="max-width:240px;flex:1" onkeydown="if(event.key===\'Enter\')addCli()"><button class="btn btn-p" onclick="addCli()">+ Aggiungi</button></div>'
+    +(cli.length===0?'<div class="empty"><i>👤</i>Nessun cliente ancora.</div>'
+      :'<div class="grid">'+cli.map(function(c){
+          var gs=S.groups.filter(function(g){return g.clients&&g.clients.indexOf(c.id)!==-1;});
+          return '<div class="card" onclick="goClient(\''+c.id+'\')"><div class="card-tp">Cliente</div><div class="card-nm">'+h(c.name)+'</div><div class="card-mt">Dal '+fd(c.joinDate)+'</div>'
+            +(gs.length?'<div style="margin-top:7px;display:flex;gap:4px;flex-wrap:wrap">'+gs.map(function(g){return '<span class="bdg">'+h(g.name)+'</span>';}).join('')+'</div>':'')
+            +'<div style="margin-top:8px;font-size:11px;color:var(--a);font-weight:700">Profilo →</div></div>';
+        }).join('')+'</div>')
+    +'</div>');
 }
-function sNGT(t){_ngt=t;['group','single','couple'].forEach(k=>{const el=document.getElementById('t-'+k);if(el)el.className='tb'+(k===t?' active':'')})}
-function addTE(){
-  _tec++;
-  const d=document.createElement('div');
-  d.style.cssText='background:#fafafa;border:1px solid var(--br);border-radius:8px;padding:10px;margin-bottom:8px';
-  d.innerHTML=`<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-    <div style="grid-column:1/-1"><div class="fl">Nome</div><input type="text" placeholder="es. Squat" class="te-n"></div>
-    <div><div class="fl">Serie</div><input type="text" placeholder="4" class="te-s"></div>
-    <div><div class="fl">Reps</div><input type="text" placeholder="8-10" class="te-r"></div>
-    <div><div class="fl">Recupero</div><input type="text" placeholder="90s" class="te-rest"></div>
-    <div><div class="fl">Note</div><input type="text" placeholder="tecnica" class="te-no"></div>
-  </div>
-  <button class="bid" style="margin-top:6px;font-size:11px;padding:3px 8px" onclick="this.closest('div').remove()">🗑 Rimuovi</button>`;
-  document.getElementById('te-list').appendChild(d);
+function addCli() {
+  var el=document.getElementById('new-cli'); if(!el||!el.value.trim()) return;
+  S.clients=S.clients||[]; S.clients.push({id:uid(),name:el.value.trim(),joinDate:today(),benchmarks:{},customBenchmarks:[]});
+  save(); rCliPage(); rNav(); toast('Cliente aggiunto! 👤');
+}
+
+// ── CLIENT PROFILE ──────────────────────────────────────────────────────────
+function goClient(cid) {
+  VIEW='client'; GID=null; rNav(); closeSB();
+  var client=(S.clients||[]).filter(function(c){return c.id===cid;})[0]; if(!client) return;
+  var gs=S.groups.filter(function(g){return g.clients&&g.clients.indexOf(cid)!==-1;});
+  var bms=getBMs(client); var bm=client.benchmarks||{};
+  var cards=bms.map(function(b){
+    var logs=bm[b.id]||[]; var last=logs[logs.length-1]; var prev=logs[logs.length-2];
+    var trend='';
+    if(last&&prev){var v1=parseFloat(String(last.v).replace(':','.')),v2=parseFloat(String(prev.v).replace(':','.'));var better=b.hb?(v1>v2):(v1<v2);trend='<div class="bm-tr '+(better?'tr-up':'tr-dn')+'">'+(better?'↑ Migliorato':'↓ Peggiorato')+'</div>';}
+    var cd=logs.map(function(l){var v=String(l.v);if(v.indexOf(':')!==-1){var p=v.split(':');v=String(parseInt(p[0])*60+parseInt(p[1]||0));}return{date:l.date,v:parseFloat(v)||0};});
+    return '<div class="bm-card'+(last?' hd':'')+'"><div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:4px"><div class="bm-nm">'+b.icon+' '+h(b.name)+'</div>'
+      +'<button class="btn-ia" style="font-size:11px;padding:4px 8px" onclick="openBmModal(\''+cid+'\',\''+b.id+'\')">+ Log</button></div>'
+      +(last?'<div><span class="bm-val">'+h(String(last.v))+'</span><span class="bm-u">'+h(b.unit)+'</span></div><div class="bm-dt">'+fd(last.date)+'</div>'+trend+(cd.length>=2?chart(cd,'#014462',220,60):''):'<div style="color:var(--md);font-size:12px;margin-top:6px">Nessun dato ancora</div>')+'</div>';
+  }).join('');
+  var notes=client.notes||'';
+  var grpList=gs.length?' · '+gs.map(function(g){return h(g.name);}).join(', '):'';
+  set('<div class="page"><div class="ey">Profilo Cliente</div><div class="ph"><div><h1 class="ttl">'+h(client.name)+'</h1><div class="sub">Dal '+fd(client.joinDate)+grpList+'</div></div><button class="btn btn-d" onclick="delCli(\''+cid+'\')">🗑 Elimina</button></div>'
+    +'<div class="dv"><span>Note</span></div>'
+    +'<textarea placeholder="Note, obiettivi, limitazioni fisiche..." style="margin-bottom:4px;min-height:70px" onchange="updCliNotes(\''+cid+'\',this.value)">'+h(notes)+'</textarea>'
+
+```
++'<div class="dv"><span>Benchmark</span></div>'
++'<div style="margin-bottom:14px"><button class="btn btn-p" style="font-size:12px;padding:7px 14px" onclick="openBmModal(\''+cid+'\',\'\')">+ Nuovo benchmark</button></div>'
++'<div class="bm-grid">'+cards+'</div></div>');
+```
+
+}
+function updCliNotes(cid,val) { var c=(S.clients||[]).filter(function(x){return x.id===cid;})[0]; if(c){c.notes=val;save();} }
+function delCli(cid) {
+S.clients=(S.clients||[]).filter(function(c){return c.id!==cid;});
+S.groups.forEach(function(g){g.clients=(g.clients||[]).filter(function(id){return id!==cid;});});
+save(); goCli(); toast(‘Eliminato.’,’#c0392b’);
+}
+function openBmModal(cid,bid) {
+var client=(S.clients||[]).filter(function(c){return c.id===cid;})[0];
+var bms=client?getBMs(client):DEF_BM;
+var b=bid?bms.filter(function(x){return x.id===bid;})[0]:null;
+var ph=b?(b.unit===‘min:sec’?‘es. 7:30’:b.unit===‘reps’?‘es. 12’:‘es. 100’):‘es. 100’;
+var newFields=!b?’<div class="ex-grid" style="margin-bottom:12px"><div><div class="fl">Nome</div><input type="text" id="bm-nn" placeholder="es. Box Jump"></div><div><div class="fl">Unità</div><input type="text" id="bm-nu" placeholder="es. cm, s, reps"></div></div>’:’’;
+document.getElementById(‘modal-box’).innerHTML=’<div class="modal-t">📊 <span class="ac">’+(b?h(b.name):‘Nuovo benchmark’)+’</span></div>’+newFields
++’<div class="fl">Valore’+(b?’ (’+b.unit+’)’:’’)+’</div><input type="text" id="bm-v" placeholder="'+ph+'" style="margin-bottom:12px">’
++’<div class="fl">Data</div><input type="date" id="bm-d" value="'+today()+'" style="margin-bottom:4px">’
++(b?’’:`<div style="display:flex;align-items:center;gap:8px;margin-top:8px"><input type="checkbox" id="bm-hb" checked style="width:auto"><label for="bm-hb" style="font-size:13px">Più alto = meglio</label></div>`)
++’<div class="modal-a"><button class="btn btn-p" onclick="saveBm(\''+cid+'\',\''+bid+'\')">Salva</button><button class="btn btn-g" onclick="closeModal()">Annulla</button></div>’;
+document.getElementById(‘modal’).style.display=‘flex’;
+setTimeout(function(){var el=document.getElementById(‘bm-nn’)||document.getElementById(‘bm-v’);if(el)el.focus();},100);
+}
+function saveBm(cid,bid) {
+var val=(document.getElementById(‘bm-v’)||{}).value; if(!val||!val.trim()) return;
+var date=(document.getElementById(‘bm-d’)||{}).value||today();
+var client=(S.clients||[]).filter(function(c){return c.id===cid;})[0]; if(!client) return;
+if(!bid) {
+var nn=(document.getElementById(‘bm-nn’)||{}).value||’’; if(!nn.trim()){toast(‘Inserisci un nome!’,’#EB750E’);return;}
+var nu=(document.getElementById(‘bm-nu’)||{}).value||‘valore’;
+var hbEl=document.getElementById(‘bm-hb’); var hb=hbEl?hbEl.checked:true;
+var nid=‘c_’+uid();
+client.customBenchmarks=client.customBenchmarks||[];
+client.customBenchmarks.push({id:nid,name:nn.trim(),unit:nu.trim(),icon:‘📊’,hb:hb});
+bid=nid;
+}
+client.benchmarks=client.benchmarks||{}; client.benchmarks[bid]=client.benchmarks[bid]||[];
+client.benchmarks[bid].push({id:uid(),v:val.trim(),date:date});
+save(); closeModal(); goClient(cid); toast(‘Benchmark salvato! 📊’,’#EB750E’);
+}
+
+// ── TEMPLATES ──────────────────────────────────────────────────────────
+function goTpl() { VIEW=‘tpl’; GID=null; rNav(); closeSB(); rTplPage(); }
+function rTplPage() {
+var tpls=S.templates||[];
+set(’<div class="page"><div class="ey">Libreria</div><h1 class="ttl">Template</h1><div class="sub">Blocchi riutilizzabili da aggiungere alle schede</div>’
++’<button class="btn btn-p" style="margin-bottom:18px" onclick="openModal(\'tpl\')">+ Nuovo template</button>’
++(tpls.length===0?’<div class="empty"><i>📦</i>Nessun template ancora.</div>’
+:tpls.map(function(t,i){
+var exRows=(t.exercises||[]).map(function(ex){
+return ‘<div style="display:flex;align-items:center;gap:7px;padding:5px 0;border-bottom:1px solid #f0f0f0"><span class="dot '+catCls(ex.category)+'"></span><span style="font-size:13px;font-weight:700;flex:1">’+h(ex.name)+’</span>’+(ex.sets?’<span class="bdg">’+h(ex.sets)+‘×’+h(ex.reps||’’)+’</span>’:’’)+(ex.rest?’<span style="font-size:11px;color:var(--md)">rec. ‘+h(ex.rest)+’</span>’:’’)+’</div>’;
+}).join(’’);
+return ‘<div class="tpl"><div class="tpl-hdr" onclick="togTpl('+i+')">’
++’<div><div style="font-weight:900;font-size:14px">’+h(t.name)+’</div><div style="font-size:11px;color:var(--md);margin-top:2px">’+(t.exercises?t.exercises.length:0)+’ esercizi · <span class="bdg bdg-a">’+h(t.category||‘Generico’)+’</span></div></div>’
++’<div style="display:flex;gap:6px;align-items:center"><span id="tpl-c-'+i+'" style="color:var(--md)">▼</span><button class="btn-id" onclick="event.stopPropagation();delTpl('+i+')">🗑</button></div></div>’
++’<div id="tpl-b-'+i+'" style="display:none;padding:12px 16px;border-top:1px solid var(--br);background:#fafafa">’+exRows+’</div></div>’;
+}).join(’’))
++’</div>’);
+}
+function togTpl(i){var b=document.getElementById(‘tpl-b-’+i),c=document.getElementById(‘tpl-c-’+i);var o=b.style.display!==‘none’;b.style.display=o?‘none’:‘block’;c.textContent=o?‘▼’:‘▲’;}
+function delTpl(i){S.templates.splice(i,1);save();rTplPage();toast(‘Eliminato.’,’#c0392b’);}
+
+// ── GROUP VIEW ──────────────────────────────────────────────────────────
+function goGrp(gid) { VIEW=‘grp’; GID=gid; rNav(); closeSB(); rGrp(); }
+function rGrp() {
+var g=G(); if(!g) return;
+var tabs=[[‘scheda’,‘📋 Scheda’],[‘sessioni’,‘⚡ Sessioni’],[‘clienti’,‘👥 Clienti’],[‘storico’,‘🗂 Storico’]];
+set(’<div class="page"><div class="ph"><div><div class="ey">’+tL(g.type)+’</div>’
++’<h1 class="ttl" id="grp-t" style="cursor:pointer" onclick="editGN()">’+h(g.name)+’ <span style="font-size:14px;color:var(--md)">✏️</span></h1></div>’
++’<div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">’+(g.days&&g.days.length?’<button class="btn btn-d" onclick="archSch()">Archivia scheda</button>’:’’)
++’<button class="btn-id" style="padding:7px 12px;font-size:12px;border-radius:8px;font-family:Lato,sans-serif;font-weight:700" onclick="delGrp(\''+g.id+'\')">🗑</button></div></div>’
++’<div class="tabs">’+tabs.map(function(t){return ‘<button class="tab'+(TAB===t[0]?' on':'')+'" onclick="swTab(\''+t[0]+'\')">’+t[1]+’</button>’;}).join(’’)+’</div>’
++’<div id="tc"></div></div>’);
+rTab();
+}
+function swTab(t){TAB=t;document.querySelectorAll(’.tab’).forEach(function(el){var k=el.textContent.indexOf(‘📋’)!==-1?‘scheda’:el.textContent.indexOf(‘⚡’)!==-1?‘sessioni’:el.textContent.indexOf(‘👥’)!==-1?‘clienti’:‘storico’;el.className=‘tab’+(k===t?’ on’:’’);});rTab();}
+function rTab(){var tc=document.getElementById(‘tc’);if(!tc)return;({scheda:rScheda,sessioni:rSessTab,clienti:rCliTab,storico:rStorico}[TAB]||rScheda)();}
+
+// ── SCHEDA ──────────────────────────────────────────────────────────────
+function rScheda() {
+var g=G(); var days=g.days||[]; var tpls=S.templates||[];
+var html=’<div style="display:flex;gap:10px;margin-bottom:18px;flex-wrap:wrap">’
++’<div style="flex:1;min-width:140px"><div class="fl">Nome scheda</div><input type="text" id="sch-name" value="'+h(g.currentSchedaName||'')+'" placeholder="es. Forza Base Marzo" onchange="g_upSM(\'currentSchedaName\',this.value)"></div>’
++’<div><div class="fl">Data inizio</div><input type="date" id="sch-date" value="'+(g.schedaStartDate||today())+'" onchange="g_upSM(\'schedaStartDate\',this.value)"></div></div>’;
+if(days.length===0) html+=’<div class="empty"><i>📋</i>Nessun giorno ancora.</div>’;
+html+=days.map(function(day,di){return rDay(day,di);}).join(’’);
+html+=’<button class="btn btn-p" style="margin-top:8px" onclick="addDay()">+ Aggiungi Giorno</button>’;
+document.getElementById(‘tc’).innerHTML=html;
+}
+function g_upSM(f,v){var g=G();if(g){g[f]=v;save();}}
+
+function rDay(day, di) {
+var open = OPEN_DAYS[day.id];
+var tpls=S.templates||[];
+var body=’’;
+if(open){
+var exHtml=(day.exercises||[]).map(function(ex,ei){return rEx(ex,day.id,ei);}).join(’’);
+var tplBtns=tpls.length?(’<div style="margin-top:8px;display:flex;gap:6px;flex-wrap:wrap;align-items:center"><span style="font-size:10px;font-weight:700;color:var(--md);text-transform:uppercase">+ Template:</span>’
++tpls.map(function(t,ti){return ‘<button class="btn btn-g" style="font-size:10px;padding:4px 10px" onclick="addTplToDay(\''+day.id+'\','+ti+')">📦 ‘+h(t.name)+’</button>’;}).join(’’)+’</div>’):’’;
+body=’<div class="day-body">’+exHtml+’<button class="btn-add" data-did="' + day.id + '" onclick="_addEx(this)">+ Aggiungi esercizio</’
+}
+return ‘<div class="day" id="d-'+day.id+'">’
++’<div class="day-hdr" data-did="' + day.id + '" onclick="_togDay(this)">’
++’<div style="display:flex;align-items:center;gap:8px"><span style="font-size:11px;color:var(--md)">’+(open?‘▼’:‘▶’)+’</span>’
++’<input class="day-name" value="'+h(day.name)+'" onclick="event.stopPropagation()" onchange="updDayName(\''+day.id+'\',this.value)"></div>’
++’<div style="display:flex;gap:6px;align-items:center"><span class="bdg">’+(day.exercises?day.exercises.length:0)+’ esercizi</span>’
++’<button class="btn-id" data-did="' + day.id + '" onclick="event.stopPropagation();_delDay(this)">🗑</button></div></div>’
++body+’</div>’;
+}
+
+function rEx(ex, dayId, ei) {
+var key=dayId+’-’+ex.id; var open=OPEN_EXS[key];
+var logs=ex.logs||[]; var cw=ex.clientWeights||{}; var gcli=gCli();
+var body=’’;
+if(open){
+// client weight rows
+var cwHtml=’’;
+if(gcli.length){
+cwHtml=’<div class="dv"><span>Carichi per cliente</span></div>’;
+gcli.forEach(function(c){
+var kg=(cw[c.id]&&cw[c.id].kg)?cw[c.id].kg:’’;
+var rps=(cw[c.id]&&cw[c.id].reps)?cw[c.id].reps:’’;
+cwHtml+=’<div class="cw-row"><span class="cw-nm">👤 ‘+h(c.name)+’</span>’
++’<input type="number" class="cw-in" value="'+h(String(kg))+'" placeholder="kg" onchange="updCW(\''+dayId+'\',\''+ex.id+'\',\''+c.id+'\',\'kg\',this.value)">’
++’<span class="cw-u">kg</span>’
++’<input type="number" class="cw-in" value="'+h(String(rps))+'" placeholder="reps" onchange="updCW(\''+dayId+'\',\''+ex.id+'\',\''+c.id+'\',\'reps\',this.value)">’
++’<span class="cw-u">reps</span></div>’;
+});
+} else {
+cwHtml=’<div class="info" style="margin-top:10px">👥 Aggiungi clienti al gruppo per i carichi individuali</div>’;
+}
+// charts
+var chartsHtml=’’;
+if(logs.length>=2){
+var wl=logs.filter(function(l){return l.weight;}).map(function(l){return{date:l.date,v:parseFloat(l.weight)};});
+var rl=logs.filter(function(l){return l.repsActual;}).map(function(l){return{date:l.date,v:parseFloat(l.repsActual)};});
+chartsHtml=’<div class="dv"><span>Progressi</span></div><div style="display:flex;gap:14px;flex-wrap:wrap">’+(wl.length>=2?chart(wl,’#014462’,200,60):’’)+(rl.length>=2?chart(rl,’#EB750E’,200,60):’’)+’</div>’;
+}
+// log history
+var logHtml=’’;
+if(logs.length){
+logHtml=’<div class="dv"><span>Ultime sessioni</span></div>’+logs.slice().reverse().slice(0,4).map(function(l){
+return ‘<div class="log-row"><span style="color:var(--md);min-width:66px;font-size:11px">’+fd(l.date)+’</span>’
++(l.weight?’<span>⚖️ <b>’+l.weight+’</b>kg</span>’:’’)
++(l.repsActual?’<span>🔁 <b>’+l.repsActual+’</b></span>’:’’)
++(l.duration?’<span>⏱ <b>’+l.duration+’</b>s</span>’:’’)
++(l.distance?’<span>📏 <b>’+l.distance+’</b>m</span>’:’’)
++(l.note?’<span style="color:var(--md);font-style:italic">”’+h(l.note)+’”</span>’:’’)+’</div>’;
+}).join(’’);
+} else {
+logHtml=’<div class="info-a info" style="margin-top:10px">📈 Clicca 📈 per registrare la prima sessione!</div>’;
+}
+var cats=[‘forza’,‘cardio’,‘mobilità’,‘ipertrofia’,‘potenza’,‘core’,‘stretching’];
+body=’<div class="ex-body"><div class="ex-grid">’
++’<div><div class="fl">Nome</div><input type="text" value="'+h(ex.name)+'" onchange="updEx(\''+dayId+'\',\''+ex.id+'\',\'name\',this.value)"></div>’
++’<div><div class="fl">Categoria</div><select onchange="updEx(\''+dayId+'\',\''+ex.id+'\',\'category\',this.value)">’
++cats.map(function(c){return ‘<option value=”’+c+’”’+(ex.category===c?’ selected’:’’)+’>’+c.charAt(0).toUpperCase()+c.slice(1)+’</option>’;}).join(’’)+’</select></div>’
++’<div><div class="fl">Serie</div><input type="text" value="'+h(ex.sets||'')+'" placeholder="4" onchange="updEx(\''+dayId+'\',\''+ex.id+'\',\'sets\',this.value)"></div>’
++’<div><div class="fl">Reps/Tempo</div><input type="text" value="'+h(ex.reps||'')+'" placeholder="8-10" onchange="updEx(\''+dayId+'\',\''+ex.id+'\',\'reps\',this.value)"></div>’
++’<div><div class="fl">Recupero</div><input type="text" value="'+h(ex.rest||'')+'" placeholder="90s" onchange="updEx(\''+dayId+'\',\''+ex.id+'\',\'rest\',this.value)"></div>’
++’<div><div class="fl">Note</div><input type="text" value="'+h(ex.notes||'')+'" placeholder="note tecniche" onchange="updEx(\''+dayId+'\',\''+ex.id+'\',\'notes\',this.value)"></div>’
++’</div>’+cwHtml+chartsHtml+logHtml+’</div>’;
+}
+var slbl=ex.sets?’<span class="bdg">’+h(ex.sets)+‘×’+h(ex.reps||’’)+’</span>’:’’;
+var llbl=logs.length?’<span class="bdg bdg-ok">’+logs.length+’</span>’:’’;
+return ‘<div class="ex" id="ex-'+ex.id+'">’
++’<div class="ex-hdr" data-did="' + dayId + '" data-eid="' + ex.id + '" onclick="_togEx(this)">’
++’<div style="display:flex;align-items:center;gap:7px"><span style="font-size:11px;color:var(--md)">’+(open?‘▼’:‘▶’)+’</span>’
++’<span class="dot '+catCls(ex.category)+'"></span><span style="font-weight:700;font-size:13px">’+h(ex.name)+’</span></div>’
++’<div style="display:flex;gap:5px;align-items:center">’+slbl+llbl
++’<button class="btn-ia" data-did="' + dayId + '" data-eid="' + ex.id + '" onclick="event.stopPropagation();_logM(this)">📈</button>’
++’<button class="btn-id" data-did="' + dayId + '" data-eid="' + ex.id + '" onclick="event.stopPropagation();_delEx(this)">🗑</button>’
++’</div></div>’+body+’</div>’;
+}
+
+// Scheda actions
+function togDay(did){OPEN_DAYS[did]=!OPEN_DAYS[did];rScheda();}
+function togEx(did,eid){var k=did+’-’+eid;OPEN_EXS[k]=!OPEN_EXS[k];rScheda();}
+function updDayName(did,v){var g=G();var d=g.days.filter(function(x){return x.id===did;})[0];if(d){d.name=v;save();}}
+function updEx(did,eid,f,v){var g=G();var d=g.days.filter(function(x){return x.id===did;})[0];if(!d)return;var e=d.exercises.filter(function(x){return x.id===eid;})[0];if(e){e[f]=v;save();}}
+function updCW(did,eid,cid,f,v){var g=G();var d=g.days.filter(function(x){return x.id===did;})[0];if(!d)return;var e=d.exercises.filter(function(x){return x.id===eid;})[0];if(!e)return;e.clientWeights=e.clientWeights||{};e.clientWeights[cid]=e.clientWeights[cid]||{};e.clientWeights[cid][f]=v;save();}
+
+function addDay(){
+var g=G(); g.days=g.days||[];
+var lbl=[‘A’,‘B’,‘C’,‘D’,‘E’,‘F’];
+var d={id:uid(),name:‘Giorno ‘+(lbl[g.days.length]||g.days.length+1),exercises:[]};
+g.days.push(d); OPEN_DAYS[d.id]=true; save(); rScheda(); toast(‘Giorno aggiunto!’);
+}
+function addEx(did){
+var g=G(); var d=g.days.filter(function(x){return x.id===did;})[0]; if(!d) return;
+var e={id:uid(),name:‘Nuovo esercizio’,category:‘forza’,sets:’’,reps:’’,rest:’’,notes:’’,logs:[],clientWeights:{}};
+d.exercises.push(e); OPEN_EXS[did+’-’+e.id]=true; save(); rScheda(); toast(‘Esercizio aggiunto!’);
+}
+function delDay(did){
+var g=G(); g.days=g.days.filter(function(x){return x.id!==did;});
+delete OPEN_DAYS[did]; save(); rScheda(); toast(‘Eliminato.’,’#c0392b’);
+}
+function delEx(did,eid){
+var g=G(); var d=g.days.filter(function(x){return x.id===did;})[0]; if(!d) return;
+d.exercises=d.exercises.filter(function(x){return x.id!==eid;});
+delete OPEN_EXS[did+’-’+eid]; save(); rScheda(); toast(‘Eliminato.’,’#c0392b’);
+}
+function addTplToDay(did,ti){
+var tpl=S.templates[ti]; if(!tpl) return;
+var g=G(); var d=g.days.filter(function(x){return x.id===did;})[0]; if(!d) return;
+tpl.exercises.forEach(function(ex){
+var ne=JSON.parse(JSON.stringify(ex)); ne.id=uid(); ne.logs=[]; ne.clientWeights={};
+d.exercises.push(ne); OPEN_EXS[did+’-’+ne.id]=true;
+});
+OPEN_DAYS[did]=true; save(); rScheda(); toast(’”’+tpl.name+’” aggiunto! 📦’);
+}
+function archSch(){
+var g=G(); if(!g.days||!g.days.length){toast(‘Nessuna scheda!’,’#EB750E’);return;}
+
+g.archivedSchede=g.archivedSchede||[];
+g.archivedSchede.push({id:uid(),name:g.currentSchedaName||‘Scheda senza nome’,startDate:g.schedaStartDate||today(),endDate:today(),days:JSON.parse(JSON.stringify(g.days))});
+g.days=[]; g.currentSchedaName=’’; g.schedaStartDate=today();
+OPEN_DAYS={}; OPEN_EXS={}; save(); rGrp(); toast(‘Archiviata! ✅’);
+}
+
+// ── LOG MODAL ──────────────────────────────────────────────────────────
+var LT={};
+function openLogM(did,eid){
+LT={did:did,eid:eid};
+var g=G(); var d=g.days.filter(function(x){return x.id===did;})[0];
+var ex=d?d.exercises.filter(function(x){return x.id===eid;})[0]:null; if(!ex) return;
+document.getElementById(‘modal-box’).innerHTML=’<div class="modal-t">📈 <span class="ac">’+h(ex.name)+’</span></div>’
++’<div class="ex-grid"><div><div class="fl">Carico (kg)</div><input type="number" id="lw" placeholder="80"></div>’
++’<div><div class="fl">Reps eseguite</div><input type="number" id="lr" placeholder="10"></div>’
++’<div><div class="fl">Durata (sec)</div><input type="number" id="ld" placeholder="30"></div>’
++’<div><div class="fl">Distanza (m)</div><input type="number" id="ldi" placeholder="500"></div>’
++’<div style="grid-column:1/-1"><div class="fl">Data</div><input type="date" id="ldate" value="'+today()+'"></div>’
++’<div style="grid-column:1/-1"><div class="fl">Note</div><input type="text" id="ln" placeholder="es. ottima forma"></div></div>’
++’<div class="modal-a"><button class="btn btn-a" onclick="saveLog()">Salva</button><button class="btn btn-g" onclick="closeModal()">Annulla</button></div>’;
+document.getElementById(‘modal’).style.display=‘flex’;
+}
+function saveLog(){
+var g=G(); var d=g.days.filter(function(x){return x.id===LT.did;})[0];
+var ex=d?d.exercises.filter(function(x){return x.id===LT.eid;})[0]:null; if(!ex) return;
+ex.logs=ex.logs||[];
+ex.logs.push({id:uid(),date:(document.getElementById(‘ldate’)||{}).value||today(),weight:(document.getElementById(‘lw’)||{}).value,repsActual:(document.getElementById(‘lr’)||{}).value,duration:(document.getElementById(‘ld’)||{}).value,distance:(document.getElementById(‘ldi’)||{}).value,note:(document.getElementById(‘ln’)||{}).value});
+save(); closeModal(); rScheda(); toast(‘Registrato! 📈’,’#EB750E’);
+}
+
+// ── SESSIONI ──────────────────────────────────────────────────────────
+function rSessTab(){
+var g=G(); var days=g.days||[]; var sessions=g.sessions||[]; var gcli=gCli();
+var startBtns=days.length
+?’<div style="margin-bottom:18px"><div class="fl" style="margin-bottom:8px">Avvia nuova sessione</div><div style="display:flex;gap:8px;flex-wrap:wrap">’+days.map(function(d,di){return ‘<button class="btn btn-a" onclick="startSes('+di+')">▶ ‘+h(d.name)+’</button>’;}).join(’’)+’</div></div>’
+:’<div class="info" style="margin-bottom:16px">📋 Prima crea la scheda con giorni ed esercizi.</div>’;
+var histHtml=sessions.length===0?’<div class="empty"><i>⚡</i>Nessuna sessione.</div>’
+:’<div class="dv"><span>’+sessions.length+’ Sessioni</span></div>’+sessions.slice().reverse().map(function(s,ri){
+var i=sessions.length-1-ri;
+var exRows=(s.exercises||[]).map(function(ex){
+var rows=(s.clientData&&s.clientData[ex.id])?s.clientData[ex.id]:[];
+return ‘<div style="margin-bottom:12px"><div style="font-weight:700;font-size:13px;margin-bottom:6px;display:flex;align-items:center;gap:6px"><span class="dot '+catCls(ex.category)+'"></span>’+h(ex.name)+(ex.sets?’<span class="bdg">’+h(ex.sets)+‘×’+h(ex.reps||’’)+’</span>’:’’)+’</div>’
++(rows.length===0?’<div style="font-size:12px;color:var(--md);padding-left:12px">Nessun dato</div>’
+:rows.map(function(cd){var cn=(S.clients||[]).filter(function(c){return c.id===cd.clientId;})[0];return ‘<div style="display:flex;gap:8px;align-items:center;font-size:12px;padding:4px 12px;border-bottom:1px solid #f0f0f0"><span style="font-weight:700;min-width:90px">👤 ‘+h(cn?cn.name:’?’)+’</span>’+(cd.kg?’<span>⚖️ <b>’+cd.kg+’</b>kg</span>’:’’)+(cd.reps?’<span>🔁 <b>’+cd.reps+’</b> reps</span>’:’’)+(cd.note?’<span style="color:var(--md);font-style:italic">”’+h(cd.note)+’”</span>’:’’)+’</div>’;}).join(’’))+’</div>’;
+}).join(’’);
+return ‘<div class="ses-hist"><div class="ses-hist-hdr" onclick="togSes('+i+')">’
++’<div><div style="font-weight:900;font-size:14px">’+h(s.dayName)+’ — ‘+fd(s.date)+’</div><div style="font-size:11px;color:var(--md);margin-top:2px">’+(s.exercises?s.exercises.length:0)+’ esercizi</div></div>’
++’<div style="display:flex;gap:6px;align-items:center"><span id="sh-c-'+i+'" style="color:var(--md)">▼</span><button class="btn-id" onclick="event.stopPropagation();delSes('+i+')">🗑</button></div></div>’
++’<div id="sh-b-'+i+'" style="display:none;padding:14px 16px;border-top:1px solid var(--br);background:#fafafa">’+exRows+’</div></div>’;
+}).join(’’);
+document.getElementById(‘tc’).innerHTML=startBtns+histHtml;
+}
+function togSes(i){var b=document.getElementById(‘sh-b-’+i),c=document.getElementById(‘sh-c-’+i);var o=b.style.display!==‘none’;b.style.display=o?‘none’:‘block’;c.textContent=o?‘▼’:‘▲’;}
+function delSes(i){G().sessions.splice(i,1);save();rTab();toast(‘Eliminata.’,’#c0392b’);}
+function startSes(di){
+var g=G(); var day=g.days[di]; var gcli=gCli();
+var exHtml=day.exercises.map(function(ex,ei){
+var cw=ex.clientWeights||{};
+var rows=gcli.map(function(c){
+var kg=(cw[c.id]&&cw[c.id].kg)?cw[c.id].kg:’’;
+var rps=(cw[c.id]&&cw[c.id].reps)?cw[c.id].reps:’’;
+return ‘<div class="ses-row"><div class="ses-nm">👤 ‘+h(c.name)+’</div><div style="display:flex;gap:7px;align-items:center;flex-wrap:wrap">’
++’<input type="number" class="ses-in" id="si-'+ei+'-'+c.id+'-kg" value="'+h(String(kg))+'" placeholder="kg"><span class="ses-u">kg</span>’
++’<input type="number" class="ses-in" id="si-'+ei+'-'+c.id+'-reps" value="'+h(String(rps))+'" placeholder="reps"><span class="ses-u">reps</span>’
++’<input type="text" class="ses-in" id="si-'+ei+'-'+c.id+'-note" placeholder="note" style="width:72px"></div></div>’;
+}).join(’’);
+return ‘<div class="ses-ex"><div class="ses-exh"><div style="font-weight:900;font-size:14px"><span class="dot '+catCls(ex.category)+'" style="margin-right:6px"></span>’+h(ex.name)+’</div>’
++’<div style="font-size:12px;color:var(--md);margin-top:2px">’+(ex.sets?ex.sets+‘×’+(ex.reps||’’):’’)+(ex.rest?’ · Rec. ‘+ex.rest:’’)+(ex.notes?’ · ‘+ex.notes:’’)+’</div></div>’
++rows+(gcli.length===0?’<div style="padding:10px 16px;font-size:12px;color:var(--md)">Aggiungi clienti per registrare i dati</div>’:’’)+’</div>’;
+}).join(’’);
+document.getElementById(‘tc’).innerHTML=’<div class="ses-ban"><div><h3>⚡ ‘+h(day.name)+’ — ‘+fd(today())+’</h3><p>’+gcli.length+’ clienti · ‘+day.exercises.length+’ esercizi</p></div><button class="btn" style="background:rgba(255,255,255,.2);color:#fff;border:1.5px solid rgba(255,255,255,.3)" onclick="swTab(\'sessioni\')">✕ Annulla</button></div>’
++exHtml+’<div style="display:flex;gap:10px;margin-top:16px;flex-wrap:wrap"><button class="btn btn-a" style="font-size:14px;padding:12px 22px" onclick="saveSes('+di+')">💾 Salva sessione</button><button class="btn btn-g" onclick="swTab(\'sessioni\')">Annulla</button></div>’;
+}
+function saveSes(di){
+var g=G(); var day=g.days[di]; var gcli=gCli(); var cd={};
+day.exercises.forEach(function(ex,ei){
+cd[ex.id]=gcli.map(function(c){return{clientId:c.id,kg:(document.getElementById(‘si-’+ei+’-’+c.id+’-kg’)||{}).value||’’,reps:(document.getElementById(‘si-’+ei+’-’+c.id+’-reps’)||{}).value||’’,note:(document.getElementById(‘si-’+ei+’-’+c.id+’-note’)||{}).value||’’};}).filter(function(r){return r.kg||r.reps||r.note;});
+gcli.forEach(function(c){var kg=(document.getElementById(‘si-’+ei+’-’+c.id+’-kg’)||{}).value;var rps=(document.getElementById(‘si-’+ei+’-’+c.id+’-reps’)||{}).value;if(kg||rps){ex.logs=ex.logs||[];ex.logs.push({id:uid(),date:today(),weight:kg,repsActual:rps,note:(document.getElementById(‘si-’+ei+’-’+c.id+’-note’)||{}).value||’’});}});
+});
+g.sessions=g.sessions||[]; g.sessions.push({id:uid(),date:today(),dayName:day.name,exercises:JSON.parse(JSON.stringify(day.exercises)),clientData:cd});
+save(); TAB=‘sessioni’; rGrp(); toast(‘Sessione salvata! 💾’,’#1a7a4a’);
+}
+
+// ── GROUP CLIENTI TAB ──────────────────────────────────────────────────────────
+function rCliTab(){
+var g=G(); var all=S.clients||[];
+var asgn=(g.clients||[]).map(function(id){return all.filter(function(c){return c.id===id;})[0];}).filter(Boolean);
+var unasgn=all.filter(function(c){return !(g.clients||[]).includes(c.id);});
+var html=’<div><div style="font-size:13px;color:var(--md);margin-bottom:14px">I clienti assegnati appaiono nelle sessioni e hanno i carichi individuali nella scheda.</div>’;
+html+=asgn.length===0?’<div class="empty" style="padding:20px 0"><i>👥</i>Nessun cliente assegnato.</div>’
+:asgn.map(function(c){return ‘<div style="display:flex;align-items:center;justify-content:space-between;padding:12px 14px;background:var(--wh);border:1px solid var(--br);border-radius:var(--r);margin-bottom:8px;box-shadow:0 1px 4px rgba(1,68,98,.08)"><div><div style="font-weight:700;font-size:14px">’+h(c.name)+’</div><div style="font-size:11px;color:var(--md)">Dal ‘+fd(c.joinDate)+’</div></div><div style="display:flex;gap:6px"><button class="btn-i" style="font-size:11px;padding:5px 10px" onclick="goClient(\''+c.id+'\')">Profilo</button><button class="btn-id" onclick="remCliGrp(\''+c.id+'\')">Rimuovi</button></div></div>’;}).join(’’);
+if(unasgn.length) html+=’<div class="dv"><span>Aggiungi al gruppo</span></div>’+unasgn.map(function(c){return ‘<div style="display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:var(--wh);border:1px solid var(--br);border-radius:var(--r);margin-bottom:7px;opacity:.75"><span style="font-weight:700;font-size:13px">’+h(c.name)+’</span><button class="btn btn-p" style="padding:6px 14px;font-size:11px" onclick="addCliGrp(\''+c.id+'\')">+ Aggiungi</button></div>’;}).join(’’);
+if(!all.length) html+=’<div class="info">💡 Prima crea i clienti in <strong>Archivio Clienti</strong>.</div>’;
+html+=’</div>’;
+document.getElementById(‘tc’).innerHTML=html;
+}
+function addCliGrp(id){var g=G();g.clients=g.clients||[];if(!g.clients.includes(id)){g.clients.push(id);save();rTab();rNav();toast(‘Cliente aggiunto!’);}}
+function remCliGrp(id){var g=G();g.clients=(g.clients||[]).filter(function(i){return i!==id;});save();rTab();rNav();}
+
+// ── STORICO ──────────────────────────────────────────────────────────
+function rStorico(){
+var g=G(); var arch=g.archivedSchede||[];
+if(!arch.length){document.getElementById(‘tc’).innerHTML=’<div class="empty"><i>🗂</i>Nessuna scheda archiviata.</div>’;return;}
+document.getElementById(‘tc’).innerHTML=arch.map(function(s,i){
+var daysHtml=(s.days||[]).map(function(day){
+return ‘<div style="font-weight:700;font-size:10px;color:var(--md);text-transform:uppercase;letter-spacing:.08em;margin:10px 0 5px">’+h(day.name)+’</div>’
++(day.exercises||[]).map(function(ex){return ‘<div style="display:flex;align-items:center;gap:7px;padding:4px 0 4px 10px;border-bottom:1px solid #f0f0f0;font-size:13px"><span class="dot '+catCls(ex.category)+'"></span>’+h(ex.name)+(ex.sets?’<span style="color:var(--md);font-size:11px">— ‘+h(ex.sets)+‘×’+h(ex.reps||’’)+’</span>’:’’)+’</div>’;}).join(’’);
+}).join(’’);
+return ‘<div style="background:var(--wh);border:1px solid var(--br);border-radius:var(--r);margin-bottom:10px;overflow:hidden;box-shadow:0 1px 4px rgba(1,68,98,.08)">’
++’<div style="display:flex;align-items:center;justify-content:space-between;padding:13px 16px;cursor:pointer;border-left:4px solid var(--md)" onclick="togArch('+i+')">’
++’<div><div style="font-weight:900;font-size:14px">’+h(s.name||‘Scheda senza nome’)+’</div><div style="font-size:11px;color:var(--md);margin-top:2px">’+fd(s.startDate)+’ → ‘+fd(s.endDate)+’</div></div>’
++’<span id="arch-c-'+i+'" style="color:var(--md)">▼</span></div>’
++’<div id="arch-b-'+i+'" style="display:none;padding:14px 16px;border-top:1px solid var(--br);background:#fafafa">’+daysHtml+’</div></div>’;
+}).join(’’);
+}
+function togArch(i){var b=document.getElementById(‘arch-b-’+i),c=document.getElementById(‘arch-c-’+i);var o=b.style.display!==‘none’;b.style.display=o?‘none’:‘block’;c.textContent=o?‘▼’:‘▲’;}
+
+// ── GROUP MANAGEMENT ──────────────────────────────────────────────────────────
+function editGN(){
+var g=G(); var el=document.getElementById(‘grp-t’); if(!el) return;
+el.outerHTML=’<div style="display:flex;align-items:center;gap:8px"><input class="ii" id="gn-inp" value="'+h(g.name)+'" onkeydown="if(event.key===\'Enter\')saveGN()"><button class="btn btn-p" onclick="saveGN()">Salva</button></div>’;
+var inp=document.getElementById(‘gn-inp’); if(inp) inp.focus();
+}
+function saveGN(){var inp=document.getElementById(‘gn-inp’);var v=inp?inp.value.trim():’’;if(!v)return;G().name=v;save();rNav();rGrp();}
+function delGrp(id){S.groups=S.groups.filter(function(g){return g.id!==id;});GID=null;save();goDash();toast(‘Eliminato.’,’#c0392b’);}
+
+// ── MODALS ──────────────────────────────────────────────────────────
+var NGT=‘group’, TPLE=0;
+function openModal(type){
+var mb=document.getElementById(‘modal-box’);
+if(type===‘grp’){
+NGT=‘group’;
+mb.innerHTML=’<div class="modal-t">Nuovo <span class="ac">Gruppo</span></div>’
++’<div class="fl" style="margin-bottom:6px">Tipo</div>’
++’<div style="display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap">’
++’<button class="tbtn on" id="tt-group" onclick="setNGT(\'group\')">👥 Small Group</button>’
++’<button class="tbtn" id="tt-single" onclick="setNGT(\'single\')">👤 Singolo</button>’
++’<button class="tbtn" id="tt-couple" onclick="setNGT(\'couple\')">👫 Coppia</button></div>’
++’<div class="fl">Nome</div><input type="text" id="ng-n" placeholder="es. Small Group Lunedì" onkeydown="if(event.key===\'Enter\')createGrp()">’
++’<div class="modal-a"><button class="btn btn-p" onclick="createGrp()">Crea</button><button class="btn btn-g" onclick="closeModal()">Annulla</button></div>’;
+document.getElementById(‘modal’).style.display=‘flex’;
+setTimeout(function(){var el=document.getElementById(‘ng-n’);if(el)el.focus();},100);
+}
+if(type===‘tpl’){
+TPLE=0;
+mb.innerHTML=’<div class="modal-t">📦 Nuovo <span class="ac">Template</span></div>’
++’<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px">’
++’<div><div class="fl">Nome</div><input type="text" id="tpl-nm" placeholder="es. Warm-up Forza"></div>’
++’<div><div class="fl">Categoria</div><select id="tpl-cat"><option>Riscaldamento</option><option>Forza</option><option>Cardio</option><option>Mobilità</option><option>Defaticamento</option><option>Potenza</option><option>Core</option></select></div></div>’
++’<div class="dv"><span>Esercizi</span></div><div id="tpl-exs"></div>’
++’<button class="btn-add" onclick="addTplEx()" style="margin-bottom:12px">+ Aggiungi esercizio</button>’
++’<div class="modal-a"><button class="btn btn-p" onclick="saveTpl()">Salva</button><button class="btn btn-g" onclick="closeModal()">Annulla</button></div>’;
+document.getElementById(‘modal’).style.display=‘flex’;
+}
+}
+function setNGT(t){NGT=t;[‘group’,‘single’,‘couple’].forEach(function(k){var el=document.getElementById(‘tt-’+k);if(el)el.className=‘tbtn’+(k===t?’ on’:’’);});}
+function addTplEx(){
+TPLE++;
+var d=document.createElement(‘div’);
+d.style.cssText=‘background:#fafafa;border:1px solid var(–br);border-radius:8px;padding:10px;margin-bottom:8px’;
+d.innerHTML=’<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">’
++’<div style="grid-column:1/-1"><div class="fl">Nome</div><input type="text" placeholder="es. Squat" class="tn"></div>’
++’<div><div class="fl">Serie</div><input type="text" placeholder="4" class="ts"></div>’
++’<div><div class="fl">Reps</div><input type="text" placeholder="8-10" class="tr"></div>’
++’<div><div class="fl">Recupero</div><input type="text" placeholder="90s" class="trest"></div>’
++’<div><div class="fl">Note</div><input type="text" placeholder="tecnica" class="tnotes"></div></div>’
++’<button class="btn-id" style="margin-top:6px;font-size:11px;padding:3px 8px" onclick="this.closest(\'div\').remove()">🗑 Rimuovi</button>’;
+document.getElementById(‘tpl-exs’).appendChild(d);
 }
 function saveTpl(){
-  const name=document.getElementById('tn').value.trim();if(!name)return;
-  const cat=document.getElementById('tcat').value;
-  const exs=Array.from(document.getElementById('te-list').children).map(d=>({
-    id:uid(),name:d.querySelector('.te-n').value||'Esercizio',category:'forza',
-    sets:d.querySelector('.te-s').value,reps:d.querySelector('.te-r').value,
-    rest:d.querySelector('.te-rest').value,notes:d.querySelector('.te-no').value,
-    logs:[],clientWeights:{}
-  }));
-  S.templates=S.templates||[];S.templates.push({id:uid(),name,category:cat,exercises:exs});
-  sS();cm();rTplP();toast('Template salvato! 📦')
+var nm=(document.getElementById(‘tpl-nm’)||{}).value||’’; if(!nm.trim()) return;
+var cat=(document.getElementById(‘tpl-cat’)||{}).value;
+var exs=Array.from(document.getElementById(‘tpl-exs’).children).map(function(d){
+return{id:uid(),name:d.querySelector(’.tn’).value||‘Esercizio’,category:‘forza’,sets:d.querySelector(’.ts’).value,reps:d.querySelector(’.tr’).value,rest:d.querySelector(’.trest’).value,notes:d.querySelector(’.tnotes’).value,logs:[],clientWeights:{}};
+});
+S.templates=S.templates||[]; S.templates.push({id:uid(),name:nm.trim(),category:cat,exercises:exs});
+save(); closeModal(); rTplPage(); toast(‘Template salvato! 📦’);
 }
-function crtGrp(){
-  const name=document.getElementById('ng-n')?.value?.trim();if(!name)return;
-  const g={id:uid(),name,type:_ngt,days:[],archivedSchede:[],clients:[],sessions:[],currentSchedaName:'',schedaStartDate:td()};
-  S.groups.push(g);sS();cm();vGroup(g.id);rNav();toast('Gruppo creato! 💪')
+function createGrp(){
+var nm=(document.getElementById(‘ng-n’)||{}).value||’’; if(!nm.trim()) return;
+var g={id:uid(),name:nm.trim(),type:NGT,days:[],archivedSchede:[],clients:[],sessions:[],currentSchedaName:’’,schedaStartDate:today()};
+S.groups.push(g); save(); closeModal(); goGrp(g.id); rNav(); toast(‘Gruppo creato! 💪’);
 }
-function cm(){document.getElementById('modal').style.display='none'}
-function cmo(e){if(e.target.id==='modal')cm()}
+function closeModal(){document.getElementById(‘modal’).style.display=‘none’;}
 
-// GROUP
-function vGroup(gid){CV='group';CG=gid;rNav();closeSB();rGrp()}
-function rGrp(){
-  const g=G();if(!g)return;
-  const tabs=[['scheda','📋 Scheda'],['sessioni','⚡ Sessioni'],['clienti','👥 Clienti'],['storico','🗂 Storico']];
-  set(`<div class="page">
-    <div class="ph">
-      <div><div class="eyebrow">${tL(g.type)}</div>
-        <h1 class="pt" id="gt" style="cursor:pointer" onclick="editGN()">${esc(g.name)} <span style="font-size:14px;color:var(--md)">✏️</span></h1>
-      </div>
-      <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
-        ${g.days?.length?`<button class="btn bd" onclick="archS()">Archivia scheda</button>`:''}
-        <button class="bid" style="padding:7px 12px;font-size:12px;border-radius:8px;font-family:Lato,sans-serif;font-weight:700" onclick="delGrp('${g.id}')">🗑</button>
-      </div>
-    </div>
-    <div class="tabs">${tabs.map(([k,l])=>`<button class="tab ${CT===k?'active':''}" onclick="swTab('${k}')">${l}</button>`).join('')}</div>
-    <div id="tc"></div>
-  </div>`);rTab()
-}
-function swTab(t){CT=t;document.querySelectorAll('.tab').forEach(el=>{const k=el.textContent.includes('📋')?'scheda':el.textContent.includes('⚡')?'sessioni':el.textContent.includes('👥')?'clienti':'storico';el.className='tab'+(k===t?' active':'')});rTab()}
-function rTab(){const tc=document.getElementById('tc');if(!tc)return;({scheda:rSch,sessioni:rSess,clienti:rGCli,storico:rStor}[CT]||rSch)()}
-
-// SCHEDA
-function rSch(){
-  const g=G(),days=g.days||[],tpls=S.templates||[];
-  document.getElementById('tc').innerHTML=`
-    <div style="display:flex;gap:10px;margin-bottom:18px;flex-wrap:wrap">
-      <div style="flex:1;min-width:140px"><div class="fl">Nome scheda</div>
-        <input type="text" value="${esc(g.currentSchedaName||'')}" placeholder="es. Forza Base Marzo" oninput="upSM('currentSchedaName',this.value)">
-      </div>
-      <div><div class="fl">Data inizio</div><input type="date" value="${g.schedaStartDate||td()}" oninput="upSM('schedaStartDate',this.value)"></div>
-    </div>
-    ${tpls.length?`<div style="margin-bottom:14px">
-      <div class="fl" style="margin-bottom:6px">Inserisci template</div>
-      <div style="display:flex;gap:7px;flex-wrap:wrap">${tpls.map((t,i)=>`<button class="btn bg" style="font-size:11px;padding:6px 12px" onclick="insTpl(${i})">📦 ${esc(t.name)}</button>`).join('')}</div>
-    </div>`:''}
-    ${days.length===0?`<div class="empty"><i>📋</i>Nessun giorno ancora.</div>`:''}
-    <div id="dc">${days.map((d,di)=>rDay(d,di)).join('')}</div>
-    <button class="btn bp" style="margin-top:8px" onclick="addDay()">+ Aggiungi Giorno</button>`
-}
-
-function rDay(day,di){
-  const open=xD.has(di);
-  return`<div class="db" id="day-${di}">
-    <div class="dh" onclick="togD(${di})">
-      <div style="display:flex;align-items:center;gap:8px">
-        <span style="font-size:11px;color:var(--md)">${open?'▼':'▶'}</span>
-        <input class="dni" value="${esc(day.name)}" onclick="event.stopPropagation()" oninput="upDN(${di},this.value)">
-      </div>
-      <div style="display:flex;gap:6px;align-items:center">
-        <span class="badge">${day.exercises.length} esercizi</span>
-        <button class="bid" onclick="event.stopPropagation();delDay(${di})">🗑</button>
-      </div>
-    </div>
-    ${open?`<div class="dy">${day.exercises.map((ex,ei)=>rEx(ex,di,ei)).join('')}
-    <button class="badd" onclick="addEx(${di})">+ Aggiungi esercizio</button></div>`:''}</div>`
-}
-
-function rEx(ex,di,ei){
-  const key=`${di}-${ei}`,open=xE.has(key),logs=ex.logs||[];
-  const gcli=gGCli(),cw=ex.clientWeights||{};
-  return`<div class="eb" id="ex-${di}-${ei}">
-    <div class="eh" onclick="togE('${key}')">
-      <div style="display:flex;align-items:center;gap:7px">
-        <span style="font-size:11px;color:var(--md)">${open?'▼':'▶'}</span>
-        <span class="cd ${c2c(ex.category)}"></span>
-        <span style="font-weight:700;font-size:13px">${esc(ex.name)}</span>
-      </div>
-      <div style="display:flex;gap:5px;align-items:center">
-        ${ex.sets?`<span class="badge">${esc(ex.sets)}×${esc(ex.reps||'')}</span>`:''}
-        ${logs.length?`<span class="badge bs">${logs.length}</span>`:''}
-        <button class="bia" onclick="event.stopPropagation();oLog(${di},${ei})">📈</button>
-        <button class="bid" onclick="event.stopPropagation();delEx(${di},${ei})">🗑</button>
-      </div>
-    </div>
-    ${open?`<div class="ebody">
-      <div class="eg">
-        <div><div class="fl">Nome</div><input type="text" value="${esc(ex.name)}" oninput="upEx(${di},${ei},'name',this.value)"></div>
-        <div><div class="fl">Categoria</div>
-          <select onchange="upEx(${di},${ei},'category',this.value)">
-            ${['forza','cardio','mobilità','ipertrofia','potenza','core','stretching'].map(c=>`<option value="${c}"${ex.category===c?' selected':''}>${c.charAt(0).toUpperCase()+c.slice(1)}</option>`).join('')}
-          </select>
-        </div>
-        <div><div class="fl">Serie</div><input type="text" value="${esc(ex.sets||'')}" placeholder="4" oninput="upEx(${di},${ei},'sets',this.value)"></div>
-        <div><div class="fl">Reps/Tempo</div><input type="text" value="${esc(ex.reps||'')}" placeholder="8-10" oninput="upEx(${di},${ei},'reps',this.value)"></div>
-        <div><div class="fl">Recupero</div><input type="text" value="${esc(ex.rest||'')}" placeholder="90s" oninput="upEx(${di},${ei},'rest',this.value)"></div>
-        <div><div class="fl">Note</div><input type="text" value="${esc(ex.notes||'')}" placeholder="note tecniche" oninput="upEx(${di},${ei},'notes',this.value)"></div>
-      </div>
-      ${gcli.length?`<div class="dv"><span>Carichi per cliente</span></div>
-      ${gcli.map(c=>`<div style="display:flex;align-items:center;gap:7px;padding:7px 0;border-bottom:1px solid #f0f0f0">
-        <span style="font-weight:700;font-size:12px;flex:1">👤 ${esc(c.name)}</span>
-        <input type="number" value="${esc(String((cw[c.id]||{}).kg||''))}" placeholder="kg" style="width:58px;padding:5px;font-size:12px;text-align:center;border:1.5px solid var(--br);border-radius:6px" oninput="upCW(${di},${ei},'${c.id}','kg',this.value)">
-        <span style="font-size:10px;color:var(--md);font-weight:700">kg</span>
-        <input type="number" value="${esc(String((cw[c.id]||{}).reps||''))}" placeholder="reps" style="width:52px;padding:5px;font-size:12px;text-align:center;border:1.5px solid var(--br);border-radius:6px" oninput="upCW(${di},${ei},'${c.id}','reps',this.value)">
-        <span style="font-size:10px;color:var(--md);font-weight:700">reps</span>
-      </div>`).join('')}`:`<div class="info" style="margin-top:10px">👥 Aggiungi clienti al gruppo per i carichi individuali</div>`}
-      ${logs.length>=2?`<div class="dv"><span>Progressi</span></div><div style="display:flex;gap:14px;flex-wrap:wrap">
-        ${logs.some(l=>l.weight)?rChart(logs.map(l=>({date:l.date,value:Number(l.weight)||0})),200,60,'#014462'):''}
-        ${logs.some(l=>l.repsActual)?rChart(logs.map(l=>({date:l.date,value:Number(l.repsActual)||0})),200,60,'#EB750E'):''}
-        ${logs.some(l=>l.duration)?rChart(logs.map(l=>({date:l.date,value:Number(l.duration)||0})),200,60,'#1a7a4a'):''}
-      </div>`:''}
-      ${logs.length?`<div class="dv"><span>Ultime sessioni</span></div>
-      ${[...logs].reverse().slice(0,4).map(l=>`<div class="lr">
-        <span style="color:var(--md);min-width:66px;font-size:11px">${fd(l.date)}</span>
-        ${l.weight?`<span>⚖️ <b>${l.weight}</b>kg</span>`:''}
-        ${l.repsActual?`<span>🔁 <b>${l.repsActual}</b></span>`:''}
-        ${l.duration?`<span>⏱ <b>${l.duration}</b>s</span>`:''}
-        ${l.distance?`<span>📏 <b>${l.distance}</b>m</span>`:''}
-        ${l.note?`<span style="color:var(--md);font-style:italic">"${esc(l.note)}"</span>`:''}</div>`).join('')}`
-      :`<div class="info-o info" style="margin-top:10px">📈 Clicca 📈 per registrare la prima sessione!</div>`}
-    </div>`:''}</div>`
-}
-
-// SESSIONI
-function rSess(){
-  const g=G(),sessions=g.sessions||[],days=g.days||[],gcli=gGCli();
-  document.getElementById('tc').innerHTML=`
-    ${days.length===0?`<div class="info" style="margin-bottom:16px">📋 Prima crea la scheda, poi avvia le sessioni.</div>`:`
-    <div style="margin-bottom:18px">
-      <div class="fl" style="margin-bottom:8px">Avvia nuova sessione</div>
-      <div style="display:flex;gap:8px;flex-wrap:wrap">${days.map((d,di)=>`<button class="btn ba" onclick="startSes(${di})">▶ ${esc(d.name)}</button>`).join('')}</div>
-    </div>`}
-    ${sessions.length===0?`<div class="empty"><i>⚡</i>Nessuna sessione registrata.</div>`:`
-    <div class="dv"><span>${sessions.length} Sessioni</span></div>
-    ${[...sessions].reverse().map((s,ri)=>{
-      const i=sessions.length-1-ri;
-      return`<div class="shc">
-        <div class="shh" onclick="togSes(${i})">
-          <div>
-            <div style="font-weight:900;font-size:14px">${esc(s.dayName)} — ${fd(s.date)}</div>
-            <div style="font-size:11px;color:var(--md);margin-top:2px">${s.exercises?.length||0} esercizi</div>
-          </div>
-          <div style="display:flex;gap:6px;align-items:center">
-            <span id="sc-${i}" style="color:var(--md)">▼</span>
-            <button class="bid" onclick="event.stopPropagation();delSes(${i})">🗑</button>
-          </div>
-        </div>
-        <div id="sb-${i}" style="display:none;padding:14px 16px;border-top:1px solid var(--br);background:#fafafa">
-          ${(s.exercises||[]).map(ex=>`<div style="margin-bottom:12px">
-            <div style="font-weight:700;font-size:13px;margin-bottom:6px;display:flex;align-items:center;gap:6px">
-              <span class="cd ${c2c(ex.category)}"></span>${esc(ex.name)}
-              ${ex.sets?`<span class="badge">${esc(ex.sets)}×${esc(ex.reps||'')}</span>`:''}
-            </div>
-            ${(s.clientData?.[ex.id]||[]).length===0?`<div style="font-size:12px;color:var(--md);padding-left:12px">Nessun dato</div>`:''}
-            ${(s.clientData?.[ex.id]||[]).map(cd=>{
-              const cn=(S.clients||[]).find(c=>c.id===cd.clientId)?.name||'?';
-              return`<div style="display:flex;gap:8px;align-items:center;font-size:12px;padding:4px 12px;border-bottom:1px solid #f0f0f0">
-                <span style="font-weight:700;min-width:90px">👤 ${esc(cn)}</span>
-                ${cd.kg?`<span>⚖️ <b>${cd.kg}</b>kg</span>`:''}
-                ${cd.reps?`<span>🔁 <b>${cd.reps}</b> reps</span>`:''}
-                ${cd.note?`<span style="color:var(--md);font-style:italic">"${esc(cd.note)}"</span>`:''}
-              </div>`}).join('')}
-          </div>`).join('')}
-        </div>
-      </div>`}).join('')}`
-}
-
-function startSes(di){
-  const g=G(),day=g.days[di],gcli=gGCli();
-  const exHtml=day.exercises.map((ex,ei)=>{
-    const cw=ex.clientWeights||{};
-    return`<div class="sex">
-      <div class="sexh">
-        <div class="sext"><span class="cd ${c2c(ex.category)}" style="margin-right:6px"></span>${esc(ex.name)}</div>
-        <div class="sexm">${ex.sets?ex.sets+'×'+(ex.reps||''):''}${ex.rest?' · Rec. '+ex.rest:''}${ex.notes?' · '+ex.notes:''}</div>
-      </div>
-      ${gcli.map(c=>`<div class="scr">
-        <div class="scn">👤 ${esc(c.name)}</div>
-        <div class="sins">
-          <input type="number" id="s-${ei}-${c.id}-kg" value="${esc(String((cw[c.id]||{}).kg||''))}" placeholder="kg">
-          <span class="sunit">kg</span>
-          <input type="number" id="s-${ei}-${c.id}-reps" value="${esc(String((cw[c.id]||{}).reps||''))}" placeholder="reps">
-          <span class="sunit">reps</span>
-          <input type="text" id="s-${ei}-${c.id}-note" placeholder="note" style="width:72px">
-        </div>
-      </div>`).join('')}
-      ${gcli.length===0?`<div style="padding:10px 16px;font-size:12px;color:var(--md)">Aggiungi clienti al gruppo per registrare i dati</div>`:''}
-    </div>`}).join('');
-  document.getElementById('tc').innerHTML=`
-    <div class="sban">
-      <div><h3>⚡ Sessione in corso — ${esc(day.name)}</h3>
-        <p>${fd(td())} · ${gcli.length} clienti · ${day.exercises.length} esercizi</p>
-      </div>
-      <button class="btn" style="background:rgba(255,255,255,.2);color:#fff;border:1.5px solid rgba(255,255,255,.3)" onclick="swTab('sessioni')">✕ Annulla</button>
-    </div>
-    ${exHtml}
-    <div style="display:flex;gap:10px;margin-top:16px;flex-wrap:wrap">
-      <button class="btn ba" style="font-size:14px;padding:12px 22px" onclick="saveSes(${di})">💾 Salva sessione</button>
-      <button class="btn bg" onclick="swTab('sessioni')">Annulla</button>
-    </div>`
-}
-
-function saveSes(di){
-  const g=G(),day=g.days[di],gcli=gGCli();
-  const clientData={};
-  day.exercises.forEach((ex,ei)=>{
-    clientData[ex.id]=gcli.map(c=>({
-      clientId:c.id,
-      kg:document.getElementById(`s-${ei}-${c.id}-kg`)?.value||'',
-      reps:document.getElementById(`s-${ei}-${c.id}-reps`)?.value||'',
-      note:document.getElementById(`s-${ei}-${c.id}-note`)?.value||''
-    })).filter(r=>r.kg||r.reps||r.note);
-    gcli.forEach(c=>{
-      const kg=document.getElementById(`s-${ei}-${c.id}-kg`)?.value;
-      const reps=document.getElementById(`s-${ei}-${c.id}-reps`)?.value;
-      if(kg||reps){ex.logs=ex.logs||[];ex.logs.push({id:uid(),date:td(),weight:kg,repsActual:reps,note:document.getElementById(`s-${ei}-${c.id}-note`)?.value||''})}
-    });
-  });
-  g.sessions=g.sessions||[];
-  g.sessions.push({id:uid(),date:td(),dayName:day.name,exercises:JSON.parse(JSON.stringify(day.exercises)),clientData});
-  sS();CT='sessioni';rGrp();toast('Sessione salvata! 💾','#1a7a4a')
-}
-
-function togSes(i){const b=document.getElementById(`sb-${i}`),c=document.getElementById(`sc-${i}`);const o=b.style.display!=='none';b.style.display=o?'none':'block';c.textContent=o?'▼':'▲'}
-function delSes(i){if(!confirm('Eliminare?'))return;G().sessions.splice(i,1);sS();rTab();toast('Eliminata.','#c0392b')}
-
-// CLIENTI TAB
-function rGCli(){
-  const g=G(),all=S.clients||[];
-  const asgn=(g.clients||[]).map(id=>all.find(c=>c.id===id)).filter(Boolean);
-  const unasgn=all.filter(c=>!(g.clients||[]).includes(c.id));
-  document.getElementById('tc').innerHTML=`<div>
-    <div style="font-size:13px;color:var(--md);margin-bottom:14px">I clienti assegnati appaiono nelle sessioni e hanno i carichi individuali nella scheda.</div>
-    ${asgn.length===0?`<div class="empty" style="padding:20px 0"><i>👥</i>Nessun cliente assegnato.</div>`:`
-    ${asgn.map(c=>`<div style="display:flex;align-items:center;justify-content:space-between;padding:12px 14px;background:var(--wh);border:1px solid var(--br);border-radius:var(--r);margin-bottom:8px;box-shadow:var(--s1)">
-      <div><div style="font-weight:700;font-size:14px">${esc(c.name)}</div><div style="font-size:11px;color:var(--md)">Dal ${fd(c.joinDate)}</div></div>
-      <div style="display:flex;gap:6px">
-        <button class="bi" style="font-size:11px;padding:5px 10px" onclick="vClient('${c.id}')">Profilo</button>
-        <button class="bid" onclick="remCli('${c.id}')">Rimuovi</button>
-      </div>
-    </div>`).join('')}`}
-    ${unasgn.length?`<div class="dv"><span>Aggiungi al gruppo</span></div>
-    ${unasgn.map(c=>`<div style="display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:var(--wh);border:1px solid var(--br);border-radius:var(--r);margin-bottom:7px;opacity:.75">
-      <span style="font-weight:700;font-size:13px">${esc(c.name)}</span>
-      <button class="btn bp" style="padding:6px 14px;font-size:11px" onclick="addCliG('${c.id}')">+ Aggiungi</button>
-    </div>`).join('')}`:''}
-    ${all.length===0?`<div class="info">💡 Prima crea i clienti in <strong>Archivio Clienti</strong>.</div>`:''}
-  </div>`
-}
-function addCliG(id){const g=G();g.clients=g.clients||[];if(!g.clients.includes(id)){g.clients.push(id);sS();rTab();rNav();toast('Cliente aggiunto!')}}
-function remCli(id){const g=G();g.clients=(g.clients||[]).filter(i=>i!==id);sS();rTab();rNav()}
-function gGCli(){const g=G();if(!g)return[];return(g.clients||[]).map(id=>(S.clients||[]).find(c=>c.id===id)).filter(Boolean)}
-
-// STORICO
-function rStor(){
-  const g=G(),arch=g.archivedSchede||[];
-  document.getElementById('tc').innerHTML=arch.length===0?`<div class="empty"><i>🗂</i>Nessuna scheda archiviata ancora.</div>`:`
-  ${arch.map((s,i)=>`<div style="background:var(--wh);border:1px solid var(--br);border-radius:var(--r);margin-bottom:10px;overflow:hidden;box-shadow:var(--s1)">
-    <div style="display:flex;align-items:center;justify-content:space-between;padding:13px 16px;cursor:pointer;border-left:4px solid var(--md)" onclick="togArch(${i})">
-      <div>
-        <div style="font-weight:900;font-size:14px">${esc(s.name||'Scheda senza nome')}</div>
-        <div style="font-size:11px;color:var(--md);margin-top:2px">${fd(s.startDate)} → ${fd(s.endDate)}</div>
-      </div>
-      <span id="ac-${i}" style="color:var(--md)">▼</span>
-    </div>
-    <div id="ab-${i}" style="display:none;padding:14px 16px;border-top:1px solid var(--br);background:#fafafa">
-      ${(s.days||[]).map(day=>`
-        <div style="font-weight:700;font-size:10px;color:var(--md);text-transform:uppercase;letter-spacing:.08em;margin:10px 0 5px">${esc(day.name)}</div>
-        ${day.exercises.map(ex=>`<div style="display:flex;align-items:center;gap:7px;padding:4px 0 4px 10px;border-bottom:1px solid #f0f0f0;font-size:13px">
-          <span class="cd ${c2c(ex.category)}"></span>${esc(ex.name)}
-          ${ex.sets?`<span style="color:var(--md);font-size:11px">— ${esc(ex.sets)}×${esc(ex.reps||'')}</span>`:''}
-        </div>`).join('')}`).join('')}
-    </div>
-  </div>`).join('')`
-}
-function togArch(i){const b=document.getElementById(`ab-${i}`),c=document.getElementById(`ac-${i}`);const o=b.style.display!=='none';b.style.display=o?'none':'block';c.textContent=o?'▼':'▲'}
-
-// CHART
-function rChart(data,W=220,H=60,color='#014462'){
-  const vals=data.filter(d=>!isNaN(d.value));if(vals.length<2)return'';
-  const maxY=Math.max(...vals.map(v=>v.value)),minY=Math.min(...vals.map(v=>v.value));
-  const pad=8;
-  const px=i=>pad+(i/(vals.length-1))*(W-2*pad);
-  const py=v=>H-pad-((v-minY)/(maxY-minY||1))*(H-2*pad);
-  const pts=vals.map((v,i)=>`${px(i)},${py(v.value)}`).join(' ');
-  const area=`${px(vals.length-1)},${H-pad} ${px(0)},${H-pad}`;
-  const gid=`g${Math.random().toString(36).slice(2,6)}`;
-  return`<div class="cw">
-    <svg width="${W}" height="${H}" style="display:block;overflow:visible">
-      <defs><linearGradient id="${gid}" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stop-color="${color}" stop-opacity="0.15"/>
-        <stop offset="100%" stop-color="${color}" stop-opacity="0"/>
-      </linearGradient></defs>
-      <polygon fill="url(#${gid})" points="${pts} ${area}"/>
-      <polyline fill="none" stroke="${color}" stroke-width="2.5" stroke-linejoin="round" points="${pts}"/>
-      ${vals.map((v,i)=>`<circle cx="${px(i)}" cy="${py(v.value)}" r="3.5" fill="${color}" stroke="white" stroke-width="1.5"/>`).join('')}
-    </svg>
-    <div style="display:flex;justify-content:space-between;font-size:10px;color:#bbb;margin-top:2px">
-      <span>${vals[0].date}</span><span style="font-weight:700;color:${color}">${vals[vals.length-1].value}</span><span>${vals[vals.length-1].date}</span>
-    </div>
-  </div>`
-}
-
-// ACTIONS
-function togD(di){if(xD.has(di))xD.delete(di);else xD.add(di);rSch()}
-function togE(k){if(xE.has(k))xE.delete(k);else xE.add(k);rSch()}
-function upSM(f,v){const g=G();g[f]=v;sS()}
-function upDN(di,v){G().days[di].name=v;sS()}
-function upEx(di,ei,f,v){G().days[di].exercises[ei][f]=v;sS()}
-function upCW(di,ei,cid,f,v){const g=G(),ex=g.days[di].exercises[ei];ex.clientWeights=ex.clientWeights||{};ex.clientWeights[cid]=ex.clientWeights[cid]||{};ex.clientWeights[cid][f]=v;sS()}
-function addDay(){const g=G();g.days=g.days||[];const l=['A','B','C','D','E','F'];g.days.push({id:uid(),name:`Giorno ${l[g.days.length]||g.days.length+1}`,exercises:[]});xD.add(g.days.length-1);sS();rSch();toast('Giorno aggiunto!')}
-function addEx(di){const g=G();g.days[di].exercises.push({id:uid(),name:'Nuovo esercizio',category:'forza',sets:'',reps:'',rest:'',notes:'',logs:[],clientWeights:{}});xE.add(`${di}-${g.days[di].exercises.length-1}`);sS();rSch();toast('Esercizio aggiunto!')}
-function delDay(di){if(!confirm('Eliminare?'))return;G().days.splice(di,1);xD.clear();xE.clear();sS();rSch();toast('Eliminato.','#c0392b')}
-function delEx(di,ei){if(!confirm('Eliminare?'))return;G().days[di].exercises.splice(ei,1);sS();rSch();toast('Eliminato.','#c0392b')}
-function archS(){
-  const g=G();if(!g.days?.length){toast('Nessuna scheda!','#EB750E');return}
-  if(!confirm(`Archiviare "${g.currentSchedaName||'scheda'}"?`))return;
-  g.archivedSchede=g.archivedSchede||[];
-  g.archivedSchede.push({id:uid(),name:g.currentSchedaName||'Scheda senza nome',startDate:g.schedaStartDate||td(),endDate:td(),days:JSON.parse(JSON.stringify(g.days))});
-  g.days=[];g.currentSchedaName='';g.schedaStartDate=td();xD.clear();xE.clear();sS();rGrp();toast('Archiviata! ✅')
-}
-function delGrp(id){if(!confirm('Eliminare?'))return;S.groups=S.groups.filter(g=>g.id!==id);CG=null;sS();vDash();toast('Eliminato.','#c0392b')}
-function editGN(){
-  const g=G(),el=document.getElementById('gt');
-  el.outerHTML=`<div style="display:flex;align-items:center;gap:8px">
-    <input class="ii" id="gni" value="${esc(g.name)}" onkeydown="if(event.key==='Enter')saveGN()">
-    <button class="btn bp" onclick="saveGN()">Salva</button></div>`;
-  document.getElementById('gni').focus();
-}
-function saveGN(){const v=document.getElementById('gni')?.value?.trim();if(!v)return;G().name=v;sS();rNav();rGrp()}
-function insTpl(i){
-  const t=S.templates[i];if(!t)return;const g=G();g.days=g.days||[];
-  const n=g.days.length;const l=['A','B','C','D','E','F'];
-  g.days.push({id:uid(),name:t.name,exercises:t.exercises.map(ex=>({...JSON.parse(JSON.stringify(ex)),id:uid(),logs:[],clientWeights:{}}))});
-  xD.add(n);sS();rSch();toast(`"${t.name}" inserito! 📦`)
-}
-function oLog(di,ei){_logT={di,ei};oModal('log')}
-function saveLog(){
-  const g=G(),ex=g.days[_logT.di].exercises[_logT.ei];ex.logs=ex.logs||[];
-  ex.logs.push({id:uid(),date:document.getElementById('ldate').value||td(),weight:document.getElementById('lw').value,repsActual:document.getElementById('lr').value,duration:document.getElementById('ld').value,distance:document.getElementById('ldi').value,note:document.getElementById('ln').value});
-  sS();cm();rSch();toast('Registrato! 📈','#EB750E')
-}
-
-// BACKUP
+// ── BACKUP ──────────────────────────────────────────────────────────
 function expD(){
-  const blob=new Blob([JSON.stringify(S,null,2)],{type:'application/json'});
-  const url=URL.createObjectURL(blob);const a=document.createElement('a');
-  a.href=url;a.download=`dml-${td()}.json`;a.click();URL.revokeObjectURL(url);toast('Esportato! 📤')
+var b=new Blob([JSON.stringify(S,null,2)],{type:‘application/json’});
+var u=URL.createObjectURL(b); var a=document.createElement(‘a’);
+a.href=u; a.download=‘dml-’+today()+’.json’; a.click(); URL.revokeObjectURL(u);
+toast(‘Esportato! 📤’);
 }
-function impD(event){
-  const file=event.target.files[0];if(!file)return;
-  const r=new FileReader();
-  r.onload=e=>{
-    try{
-      const p=JSON.parse(e.target.result);if(!p.groups)throw 0;
-      if(!confirm(`Importare? ${p.groups.length} gruppi, ${(p.clients||[]).length} clienti.`))return;
-      S=p;sS();CG=null;xD.clear();xE.clear();rNav();vDash();toast('Ripristinato! ✅')
-    }catch{toast('File non valido.','#c0392b')}
-  };
-  r.readAsText(file);event.target.value='';
+function impD(ev){
+var f=ev.target.files[0]; if(!f) return;
+var r=new FileReader();
+r.onload=function(e){
+try{
+var p=JSON.parse(e.target.result); if(!p.groups) throw 0;
+
+```
+  S=p; save(); GID=null; OPEN_DAYS={}; OPEN_EXS={}; rNav(); goDash(); toast('Ripristinato! ✅');
+}catch(err){toast('File non valido.','#c0392b');}
+```
+
+};
+r.readAsText(f); ev.target.value=’’;
 }
 
-vDash();
+// ── DELETE HELPERS (called from onclick via data attributes) ──
+function _delDay(btn) {
+var did = btn.getAttribute(‘data-did’);
+if (!did) return;
+
+var g = G();
+g.days = g.days.filter(function(x) { return x.id !== did; });
+delete OPEN_DAYS[did];
+save(); rScheda(); toast(‘Eliminato.’, ‘#c0392b’);
+}
+function _delEx(btn) {
+var did = btn.getAttribute(‘data-did’);
+var eid = btn.getAttribute(‘data-eid’);
+if (!did || !eid) return;
+
+var g = G();
+var d = g.days.filter(function(x) { return x.id === did; })[0];
+if (!d) return;
+d.exercises = d.exercises.filter(function(x) { return x.id !== eid; });
+delete OPEN_EXS[did + ‘-’ + eid];
+save(); rScheda(); toast(‘Eliminato.’, ‘#c0392b’);
+}
+
+// ── ONCLICK HELPERS (data-attribute based, no inline string escaping) ──
+function _delDay(btn) {
+var did = btn.getAttribute(‘data-did’);
+if (!did) return;
+
+var g = G(); g.days = g.days.filter(function(x){return x.id!==did;});
+delete OPEN_DAYS[did]; save(); rScheda(); toast(‘Eliminato.’,’#c0392b’);
+}
+function _delEx(btn) {
+var did = btn.getAttribute(‘data-did’), eid = btn.getAttribute(‘data-eid’);
+if (!did||!eid) return;
+
+var g = G(); var d = g.days.filter(function(x){return x.id===did;})[0]; if(!d) return;
+d.exercises = d.exercises.filter(function(x){return x.id!==eid;});
+delete OPEN_EXS[did+’-’+eid]; save(); rScheda(); toast(‘Eliminato.’,’#c0392b’);
+}
+function _togDay(el) {
+var did = el.getAttribute(‘data-did’); if(!did) return;
+OPEN_DAYS[did]=!OPEN_DAYS[did]; rScheda();
+}
+function _togEx(el) {
+var did = el.getAttribute(‘data-did’), eid = el.getAttribute(‘data-eid’); if(!did||!eid) return;
+var k=did+’-’+eid; OPEN_EXS[k]=!OPEN_EXS[k]; rScheda();
+}
+function _addEx(btn) {
+var did = btn.getAttribute(‘data-did’); if(!did) return;
+var g=G(); var d=g.days.filter(function(x){return x.id===did;})[0]; if(!d) return;
+var e={id:uid(),name:‘Nuovo esercizio’,category:‘forza’,sets:’’,reps:’’,rest:’’,notes:’’,logs:[],clientWeights:{}};
+d.exercises.push(e); OPEN_EXS[did+’-’+e.id]=true; save(); rScheda(); toast(‘Esercizio aggiunto!’);
+}
+function _logM(btn) {
+var did = btn.getAttribute(‘data-did’), eid = btn.getAttribute(‘data-eid’); if(!did||!eid) return;
+openLogM(did, eid);
+}
+
+// ── INIT ──────────────────────────────────────────────────────────
+goDash();
 </script>
 
 </body>
